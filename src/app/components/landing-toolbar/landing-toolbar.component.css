@@ -1,0 +1,12 @@
+.home-tooltip {
+  background-image: url('../../../assets/icons/tooltip.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 561px;
+  height: 364px;
+  /* visibility: hidden; */
+}
+/* 
+.has-tooltip:hover .home-tooltip{
+  visibility: visible;
+} */

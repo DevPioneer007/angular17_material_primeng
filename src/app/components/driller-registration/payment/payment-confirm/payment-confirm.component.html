@@ -1,0 +1,116 @@
+<div>
+  <app-driller-stepper [curStep]="curStep" [steps]="steps" />
+  <div class="grid grid-cols-2 gap-2 p-4">
+    <div class="bg-white shadow-xl rounded-xl p-4">
+      <div class="my-2">
+        <h2 class="text-lg font-bold">Now you Need to pay for your license and access to the HDP </h2>
+        <p class="text-xs py-2">As a regulatory commission, we would isseus you a permit upon satisfying all necessary
+          requirments and Payments.</p>
+      </div>
+      <div class="my-2">
+        <h2 class="text-3xl font-bold text-[#043924]">Hyrdo Engineering Service Limited </h2>
+        <div class="my-2 flex flex-col">
+          <div class="w-full flex justify-between text-lg">
+            <p class="text-[#333333] font-semibold">Payment Condition</p>
+          </div>
+          <div class="w-full bg-gray-100 text-md text-[#333333] rounded-xl px-8 py-4">
+            <ul class="list-disc">
+              <li>Covers for Yearly Drill permit and Lagos State Operator License, families with strollers, and visitors
+                on crutches can buy priority tickets at the venue</li>
+            </ul>
+          </div>
+          <div class="my-2">
+            <h2 class="text-[#333333] text-xl font-semibold mt-4">Select a payment method</h2>
+            <div class="flex flex-col w-full justify-between">
+              <div class=" p-4 bg-[#62CCD330] rounded-xl border border-gray-300 my-2">
+                <div class="flex justify-between items-center">
+                  <div class="">
+                    <p-radioButton name="payment" value="card" inputId="pay_card" [(ngModel)]="selectedPaymentMethod"
+                      class="border border-[#62CCD3E0] rounded-full"></p-radioButton>
+                    <label for="pay_card" class="text-sm font-bold font-[OpenSans] p-2">Pay with Credit Card</label>
+                  </div>
+                  <div class="grid grid-cols-4 gap-3 items-center">
+                    <img src="../../../assets/icons/visa.svg" class="w-full " />
+                    <img src="../../../assets/icons/discover.svg" class="w-full " />
+                    <img src="../../../assets/icons/maestro.svg" class="w-full " />
+                    <img src="../../../assets/icons/mastercard.svg" class="w-full " />
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 my-4">
+                  <input pInputText placeholder="Account Number" class="border rounded-md p-2 text-sm" />
+                  <input pInputText placeholder="Expiration Date" class="border rounded-md p-2 text-sm" />
+                  <input pInputText placeholder="CVV/CVC" class="border rounded-md p-2 text-sm" />
+                  <p class="text-sm text-[#148A92] underline self-center">What is this?</p>
+                </div>
+              </div>
+              <div class="my-2 rounded-2xl flex justify-between items-center border border-gray-300 p-4">
+                <div class="min-w-[156px]">
+                  <p-radioButton name="payment" value="paypal" inputId="pay_paypal" [(ngModel)]="selectedPaymentMethod"
+                    class="border border-[#62CCD3E0] rounded-full"></p-radioButton>
+                  <label for="pay_paypal" class="text-sm font-bold font-[OpenSans] p-2">Pay with Paypal</label>
+                </div>
+                <p class="text-xs px-4">You will be redirected to the PayPal website after submitting your order</p>
+                <img src="../../../assets/icons/paypal.svg" class="w-11 " />
+              </div>
+              <div class="my-2 rounded-2xl flex justify-between items-center border border-gray-300 p-4">
+                <div class="min-w-[156px]">
+                  <p-radioButton name="payment" value="bank" inputId="bank" [(ngModel)]="selectedPaymentMethod"
+                    class="border border-[#62CCD3E0] rounded-full"></p-radioButton>
+                  <label for="bank" class="text-sm font-bold font-[OpenSans] p-2">Bank Transfer</label>
+                </div>
+                <p class="text-xs px-4">You can upload your payment detials and prove and on confirming, we would issues you </p>
+                <img src="../../../assets/icons/paypal.svg" class="w-11 " />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-2xl shadow-xl flex flex-col flex-grow divide-y divide-gray-200">
+      <div>
+        <h2 class="font-[OpenSans] font-bold text-2xl my-4">Your Renewal Overview</h2>
+        <div class="flex my-4">
+          <img src="../../../../assets/images/dummyLogo.png" alt="Logo" class="rounded-lg w-[25%] " />
+          <div class="px-4 flex flex-col">
+            <h2 class="font-[OpenSans] font-bold text-2xl mt-4">Wine tasting In Tuscany</h2>
+            <p class="py-1">
+              <i class="pi pi-calendar"></i>
+              23 DEC 2023 - 23 DEC 2024
+            </p>
+            <div class="w-fit text-white px-2 py-1 text-xs bg-red-500 rounded-lg text-center mt-2">Pending License</div>
+          </div>
+        </div>
+      </div>
+      <div class="my-4">
+        <div class="flex my-8 px-4 justify-between">
+          <p>
+            <span class="w-6 h-6 text-[#333333] rounded-full text-white bg-[#B0E5E9] px-2 py-1">2</span>
+            <span class="px-4 font-[OpenSans] text-sm text-[#333333]">LSWRC Borehole Driller's Permit</span>
+          </p>
+          <p class="font-[OpenSans] font-bold text-sm self-center">&euro;64.00</p>
+        </div>
+        <div class="flex my-8 px-4 justify-between">
+          <p>
+            <span class="w-6 h-6 text-[#333333] rounded-full text-white bg-[#B0E5E9] px-2 py-1">2</span>
+            <span class="px-4 font-[OpenSans] text-sm text-[#333333]">Hydronet Driller Subscription</span>
+          </p>
+          <p class="font-[OpenSans] font-bold text-sm self-center">&euro;22.00</p>
+        </div>
+        <div class="flex my-8 px-4 justify-between">
+          <p>
+            <span class="w-6 h-6 text-[#333333] rounded-full text-white bg-[#B0E5E9] px-2 py-1">2</span>
+            <span class="px-4 font-[OpenSans] text-sm text-[#333333]">Monthly Featured Listing</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="my-8 flex justify-between">
+          <p class="text-xl font-[OpenSans] font-bold text-[#333333]">Total Price</p>
+          <p class="text-xl font-[OpenSans] font-bold text-[#148A92]">&euro;86.00</p>
+        </div>
+        <button class="mt-4 w-full rounded-full bg-[#148A92] text-white py-4 font-[OpenSans] font-bold"
+          [routerLink]="['../complete']">Confirm Payment</button>
+      </div>
+    </div>
+  </div>
+</div>

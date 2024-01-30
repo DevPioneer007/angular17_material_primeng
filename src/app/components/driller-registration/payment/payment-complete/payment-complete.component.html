@@ -1,0 +1,63 @@
+<div>
+  <app-driller-stepper [curStep]="curStep" [steps]="steps" />
+  <div class="grid grid-cols-2 gap-4 p-4">
+    <div class="bg-white p-4 rounded-2xl shadow-xl ">
+      <div class="p-4">
+        <div class="w-full flex justify-between text-lg">
+          <p class="text-[#333333] font-semibold">Payment Condition</p>
+        </div>
+        <div class="w-full bg-gray-100 text-md text-[#333333] rounded-xl px-8 py-4">
+          <ul class="list-disc">
+            <li>Covers for Yearly Drill permit and Lagos State Operator License, families with strollers, and visitors
+              on crutches can buy priority tickets at the venue</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <div class="flex flex-col justify-between m-auto items-center">
+          <i class="w-16 h-16 p-4 pi pi-check bg-[#89D9DE] text-3xl text-white rounded-full my-4 font-bold"></i>
+          <p class="font-bold font-[OpenSans] text-lg px-8 py-4 text-[#148A92]">Your Licensed Payment Complete</p>
+          <p class="font-bold font-[OpenSans] text-sm px-8">You will receive an email with your licensed order details.
+          </p>
+          <button
+            class="rounded-full px-8 py-2 my-4 hover:bg-[#148A92] hover:text-white duration-300 text-[#148A92] font-[OpenSans] text-md bg-white border border-[#148A92]"
+            [routerLink]="['/']">Go to Hydroflex Dashboard</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-2xl shadow-xl flex flex-col justify-between">
+      <h2 class="font-[OpenSans] font-bold text-2xl my-4">Download Analysis Receipt</h2>
+      <div class="flex mb-4">
+        <img src="../../../../assets/images/qr.png" alt="QR" class="w-[25%] " />
+        <div class="px-4 flex flex-col">
+          <h2 class="font-[OpenSans] font-bold text-xl">HoneyLand Engineering Inc.</h2>
+          <p class="py-1">
+            <i class="pi pi-calendar"></i>
+            23 DEC 2023 - 23 DEC 2024
+          </p>
+          <div class="w-fit text-white px-2 py-1 text-xs bg-[#AEC93C] rounded-lg text-center mt-2">Active License</div>
+        </div>
+      </div>
+      <div class="my-4 grid grid-cols-2 gap-4">
+        <div class="place-self-center">
+          <div class="flex mb-4">
+            <img src="../../../../assets/images/acrobat.png" alt="pdf" class="w-6" />
+            <p class="px-2 self-center font-[OpenSans] text-sm">License in PDF Format</p>
+          </div>
+          <img src="../../../../assets/images/license.png" alt="License">
+        </div>
+        <div class="place-self-center">
+          <div class="flex mb-4">
+            <img src="../../../../assets/images/acrobat.png" alt="PNG" class="w-6" />
+            <p class="px-2 self-center font-[OpenSans] text-sm">License in PNG Format</p>
+          </div>
+          <img src="../../../../assets/images/license.png" alt="License">
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="mt-4 w-[80%] rounded-full bg-[#148A92] text-white py-2 font-[OpenSans] font-bold"
+          >Download</button>
+      </div>
+    </div>
+  </div>
+</div>

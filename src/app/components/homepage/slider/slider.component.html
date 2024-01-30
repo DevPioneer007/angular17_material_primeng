@@ -1,0 +1,23 @@
+<div class="h-[560px] relative">
+  <div class="w-full absolute bottom-0">
+    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" orientation="horizontal" [circular]="true"
+      [showNavigators]="false" [autoplayInterval]="3000" indicatorsContentClass="absolute bottom-0 left-1/2 translate-x-[-50%]"> 
+      <ng-template let-product pTemplate="item">
+        <div class="w-full h-[560px] bg-cover flex flex-col justify-end"
+          [style.backgroundImage]="'url(' + '../../../../assets/images/' + product.img + ')'">
+          <div class="product-item">
+            <div class="product-item-content">
+              <div class="bg-blend-normal text-center text-white px-8 py-12 bg-black/50">
+                <h2 class="leading-[50px] text-[33px] mb-[14px] font-bold">{{product.title}}</h2>
+                <p class="font-bold text-lg leading-[22px] mb-[10px]">{{product.content}}</p>
+                <div>
+                  <button class="px-[13px] py-[9px] bg-primary-1 rounded-[3px]">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>

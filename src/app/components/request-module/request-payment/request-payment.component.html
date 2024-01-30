@@ -1,0 +1,102 @@
+<div class="my-4">
+  <app-stepper [curStep]="curStep" [steps]="steps" class="w-full"></app-stepper>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+      <div class="text-center">
+        <h2 class="text-lg font-bold font-[Quicksand] text-[#0CB9DE]">Payment Condition</h2>
+        <p class="text-xs py-2 font-[Quicksand]">Covers for Yearly Drill permit and Lagos State Operator
+          Licens, families with strollers, and visitors on crutches can buy
+          priority tickets at the venue</p>
+      </div>
+      <div class="mt-4">
+        <h2 class="font-semibold font-[Quicksand] text-xs">Select a payment method</h2>
+        <div class="flex flex-col w-full justify-between">
+          <div class="my-4">
+            <p-radioButton name="payment" value="card" inputId="pay_card" [(ngModel)]="selectedPaymentMethod"
+              class="border border-[#0CB9DE] rounded-full"></p-radioButton>
+            <label for="pay_card" class="text-sm font-bold font-[Quicksand] p-2">Pay with Credit Card</label>
+          </div>
+          <div class="grid grid-cols-4 gap-3 items-center p-4">
+            <img src="../../../assets/images/visa.png" class="w-full " />
+            <img src="../../../assets/images/discover.png" class="w-full " />
+            <img src="../../../assets/images/maestro.png" class="w-full " />
+            <img src="../../../assets/images/mastercard.png" class="w-full " />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <input pInputText placeholder="Account Holder" class="border rounded-md p-2 text-sm" />
+            <input pInputText placeholder="Account Number" class="border rounded-md p-2 text-sm" />
+            <input pInputText placeholder="Expiration Date" class="border rounded-md p-2 text-sm" />
+            <input pInputText placeholder="CVV/CVC" class="border rounded-md p-2 text-sm" />
+          </div>
+          <div class="my-4 rounded-2xl shadow-xl p-2">
+            <div>
+              <p-radioButton name="payment" value="paypal" inputId="pay_paypal" [(ngModel)]="selectedPaymentMethod"
+                class="border border-[#0CB9DE] rounded-full"></p-radioButton>
+              <label for="pay_paypal" class="text-sm font-bold font-[Quicksand] p-2">Pay with Paypal</label>
+            </div>
+            <div class="flex">
+              <img src="../../../assets/images/paypal.png" />
+              <p class="text-xs text-gray-500 font-[Quicksand] self-center p-2">You will be redirected to the PayPal
+                website after
+                submitting your order</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-2xl shadow-xl mt-4 flex flex-col justify-between">
+      <h2 class="font-[Quicksand] font-bold text-2xl mb-4">Payment Overview</h2>
+      <div class="flex my-4">
+        <div class="flex flex-col items-center rounded-xl shadow-xl bg-[#B5E0E8] p-2 w-32">
+          <img src="../../../../assets/images/otherTab3.png" alt="Logo" class="rounded-lg w-[50%] " />
+          <p class="text-sm text-[#0CB9DE] font-bold text-center p-2">WELL WATER ANALYSIS</p>
+        </div>
+        <div class="px-4 flex flex-col">
+          <h2 class="font-[Quicksand] font-bold text-lg mt-4">Wine tasting In Tuscany</h2>
+          <p class="py-1">
+            <i class="pi pi-calendar"></i>
+            23 DEC 2023 - 01:30 - 02:45
+          </p>
+          <div class="w-fit text-white px-8 py-1 text-xs bg-red-500 rounded-lg text-center mt-2">Pending Payment</div>
+        </div>
+      </div>
+      <div class="my-4">
+        <div class="flex my-4 justify-between">
+          <div class="w-[90%] flex justify-between px-2">
+            <p>
+              <span class="w-6 h-6 rounded-full text-white bg-[#0CB9DE] px-2 py-1">2</span>
+              <span class="px-4 font-[Quicksand] text-sm">LSWRC Borehole Driller's Permit</span>
+            </p>
+            <p class="font-[Quicksand] font-bold text-sm self-center">&euro;64.00</p>
+          </div>
+        </div>
+        <div class="flex my-4 justify-between">
+          <div class="w-[90%] flex justify-between px-2">
+            <p>
+              <span class="w-6 h-6 rounded-full text-white bg-[#0CB9DE] px-2 py-1">2</span>
+              <span class="px-4 font-[Quicksand] text-sm">Hydronet Driller Subscription</span>
+            </p>
+            <p class="font-[Quicksand] font-bold text-sm self-center">&euro;22.00</p>
+          </div>
+        </div>
+        <div class="flex my-4 justify-between">
+          <div class="w-[90%] flex justify-between px-2">
+            <p>
+              <span class="w-6 h-6 rounded-full text-white bg-[#0CB9DE] px-2 py-1">2</span>
+              <span class="px-4 font-[Quicksand] text-sm">Monthly Featured Listing</span>
+            </p>
+            <p class="font-[Quicksand] font-bold text-sm self-center">&euro;0.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-[90%] text-center">
+        <div class="my-8 flex justify-between">
+          <p class="text-xl font-[Quicksand] font-bold">Total Price</p>
+          <p class="text-xl font-[Quicksand] font-bold text-[#0CB9DE]">&euro;86.00</p>
+        </div>
+        <button class="mt-4 w-[75%] rounded-full bg-[#0CB9DE] text-white py-2 font-[Quicksand] font-bold"
+          [routerLink]="['../confirm']">Confirm Payment</button>
+      </div>
+    </div>
+  </div>
+</div>

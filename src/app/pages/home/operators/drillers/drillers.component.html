@@ -1,0 +1,396 @@
+<!-- slider -->
+<section class="flex border banner bg-cover bg-no-repeat">
+  <div class="flex w-full">
+    <img src="../../../assets/images/temp/sidebanner.png" alt="" class="rounded-r-full max-sm:hidden" />
+    <h2 class="text-[#0F5763] text-[40px] font-bold max-sm:text-3xl stroke  mx-auto mt-10">
+      BOREHOLE DRILLERS OPERATORS
+    </h2>
+  </div>
+</section>
+<app-landing-toolbar></app-landing-toolbar>
+<section class="bg-[#07912E] pb-2">
+  <div class="h-[1rem] bg-[#F7C600] w-full"></div>
+  <div class="py-5 px-3 bg-white rounded-xl m-3 flex max-lg:flex-col gap-5">
+    <section class=" flex gap-10 flex-col">
+      <div>
+        <h3 class="text-black font-black text-[28px] tracking-[-0.8px] leading-10 px-3">
+          LASWARCO Answers: Who & How for State Drillers!
+        </h3>
+        <div class="bg-[#D4E8EA] rounded-xl p-3 flex gap-5 flex-col">
+          <div class="flex justify-between max-lg:flex-wrap text-[11px]">
+            <div
+              class="bg-white text-[#0E839C] rounded-xl p-2 flex items-center flex-col gap-3 text-center cursor-pointer"
+              *ngFor="let item of drillerTaps; let i = index"
+              [ngClass]="{'text-[#E6FBFF]': selectedTapIndex === i, 'bg-selected': selectedTapIndex === i}"
+              (click)="setSelectedTapIndex(i)">
+              <img [src]="'../../../assets/images/temp/' + (selectedTapIndex === i ? item.imgSel :item.imgUnSel)"
+                [alt]="item.title" class="h-[75px]" />
+              <p class="font-bold tracking-[-0.5px]">
+                {{item.title}}
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[#A2D4D9] border border-[#2594A8] rounded-xl gap-5 flex flex-col py-4 px-2 text-[18px] font-normal leading-6 text-black">
+            <p *ngFor="let item of drillerTaps[selectedTapIndex].contents">{{item}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="border rounded-xl p-3 shadow-xl">
+        <h3 class="text-black font-bold text-[28px] leading-10 p-3 bg-[#F5F5F5] rounded-t-xl tracking-[-0.8px]">
+          Lagos State Water Regulatory Commission (LASWARCO)
+        </h3>
+        <div class="flex flex-col gap-10">
+          <p class="font-normal text-[18px] pt-3">
+            The Lagos State Water Regulations Commission (LSWRC) has
+            implemented an online registration system for borehole drillers
+            to obtain a license. This new system aims to streamline the
+            registration process and ensure proper regulation of borehole
+            drilling activities within Lagos State. By registering online
+            through the LSWRC website, borehole drillers can now
+            conveniently obtain the required license and comply with the
+            state's regulations.
+          </p>
+          <div>
+            <h4 class="font-bold text-2xl">Step-by-step Guide:</h4>
+            <ul class="list-disc p-5 ml-5 flex flex-col gap-5 text-[18px]">
+              <li>
+                1. Visit the Lagos State Water Regulations Commission
+                website: Open a web browser and navigate to the official
+                website of the LSWRC (https: // www.lswrc. gov.ng).
+              </li>
+              <li>
+                2. Navigate to the Borehole Drillers Registration page: On
+                the home page of the LSWRC website, look for the "Borehole
+                Drillers" section, typically found in the navigation menu.
+              </li>
+              <li>
+                3. Read the guidelines and requirements: Once you have
+                accessed the Borehole Drillers Registration page, carefully
+                read and understand the guidelines, requirements, and any
+                other relevant information provided. These guidelines will
+                provide you with a better understanding of the necessary
+                documents, fees, and procedures involved.
+              </li>
+              <li>
+                4. Fill out the online registration form: Click on the
+                "Register now" or similar button to proceed with the online
+                registration process. You will be directed to a form that
+                requires you to input personal and business details, such as
+                your name, contact information, company name, address, and
+                other relevant information. Fill out all mandatory fields
+                accurately.
+              </li>
+              <li>
+                5. Upload required documents: The online registration form
+                will prompt you to upload specific documents, such as your
+                company's registration certificate, tax identification
+                number, certificate of incorporation, and any other required
+                supporting documents. Scan these documents in advance and
+                ensure they meet the specified file format and size
+                requirements.
+              </li>
+              <li>
+                6. Pay the registration fee: Once you have completed the
+                registration form and uploaded the necessary documents, you
+                will be prompted to make a payment for the registration fee.
+                The website will guide you through various payment options,
+                such as online banking, debit or credit card, or designated
+                payment centers. Follow the instructions and make the
+                payment accordingly.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl shadow-lg border">
+        <h3 class="rounded-t-xl p-3 bg-[#F5F5F5] border-b">
+          Upcoming Events
+        </h3>
+        <div class="px-5 py-2 flex flex-col gap-5">
+          <div class="flex flex-wrap gap-14 ">
+            <div class="w-72">
+              <p class="text-[#0CB9DE]">
+                Consideration of Adoption of the Lahontan Bacteria Basin
+                Plan Amendment and SED
+              </p>
+              <p class="text-[#333]">January 17, 2024</p>
+              <p class="text-[#D34A37]">Revised Notice</p>
+            </div>
+            <div class="w-72">
+              <p class="text-[#0CB9DE]">
+                Consideration of Approval of Dominguez Channel and Greater
+                Los Angeles and Long Beach Harbor Waters Toxic Pollutants
+                TMDL
+              </p>
+              <p class="text-[#333]">January 17, 2024</p>
+              <p class="text-[#D34A37]">Notice</p>
+            </div>
+            <div class="w-72">
+              <div>
+                <span class="text-[#0CB9DE] flex gap-2 items-center">
+                  <img src="../../../assets/images/temp/click.svg" alt="" />Remote
+                  Meeting</span>
+                - Information on how to participate in State Water Board
+                meetings remotely
+              </div>
+
+              <p class="text-[#0CB9DE]">2023 Meeting Calendar</p>
+              <p class="text-[#0CB9DE] flex items-center gap-2">
+                <img src="../../../assets/images/temp/blue_tube.svg" alt="" /> Meeting
+                broadcasts
+              </p>
+            </div>
+            <div class="w-72">
+              <p class="text-[#0CB9DE]">
+                Consideration of Adoption of Santa Ynez River Basin Nitrogen
+                Compounds TMDL
+              </p>
+              <p class="text-[#333]">January 17, 2024</p>
+              <p class="text-[#D34A37]">
+                Revised Notice | Aviso Modificado
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-2 flex-col">
+            <h6 class="ml-2 text-xl">Exams</h6>
+            <div class="ml-5">
+              <p class="text-[#0CB9DE]">
+                Drinking Water Operator Certification Exam
+              </p>
+              <p class="text-[#0CB9DE]">
+                Wastewater Operator Certification Exam
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col   gap-5">
+      <button class="font-black text-2xl text-[#B2F7AD] bg-[#07912E] py-2 px-5 rounded-xl mx-auto">
+        OPERATORS STATISTICS
+      </button>
+      <div class="w-[28rem] max-lg:w-full border p-5 mx-2  rounded-xl shadow-lg flex flex-col gap-5">
+        <div class="flex justify-around text-[#77838F]">
+          <div class="flex flex-col items-center gap-2">
+            <img src="../../../assets/images/temp/green.png" alt="" />
+            <div class="flex flex-col items-center">
+              <p class="font-bold text-xs">Drill Technician</p>
+              <p class="font-semibold">2,040</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <img src="../../../assets/images/temp/yellow.png" alt="" />
+            <div class="flex flex-col items-center">
+              <p class="font-bold text-xs">Licensed Drillers</p>
+              <p class="font-semibold">100</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <img src="../../../assets/images/temp/blue.png" alt="" />
+            <div class="flex flex-col items-center">
+              <p class="font-bold text-xs">Unlicensed Drillers</p>
+              <p class="font-semibold">200</p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="flex justify-between gap-10">
+            <h3 class="text-[#828282] font-semibold text-xl">
+              Total Registered Borehole Drillig Service Provider
+            </h3>
+            <img src="../../../assets/images/temp/info.svg" alt="" />
+          </div>
+          <div class="flex items-end  flex-col mr-5">
+            <h2 class="text-[#0B1354] text-4xl font-normal">5.987,34</h2>
+            <p class="text-[#4F4F4F] text-sm">Secondary text</p>
+          </div>
+        </div>
+
+        <div class="border-t pt-2 flex justify-between gap-3 max-sm:flex-wrap text-sm">
+          <div class="flex gap-2 font-bold text-[#4F4F4F] items-center">
+            <img src="../../../assets/images/temp/greenTechnician.svg" alt="" />
+            <p>Technician</p>
+          </div>
+          <div class="flex gap-2 font-bold text-[#4F4F4F] items-center">
+            <img src="../../../assets/images/temp/yellowTechnician.svg" alt="" />
+            <p>Service Provider</p>
+          </div>
+          <div class="flex gap-2 font-bold text-[#4F4F4F] items-center">
+            <img src="../../../assets/images/temp/blueTechnician.svg" alt="" />
+            <p>Licensed</p>
+          </div>
+        </div>
+        <div class="m-auto">
+          <img src="../../../assets/images/temp/chart.svg" alt="" />
+        </div>
+      </div>
+      <div class="border shadow rounded-xl flex flex-col gap-10 p-2">
+        <div class="bg-[#EFEFEF] text-[#333] font-bold py-2 rounded-xl">
+          <h3 class="text-center pb-3 text-[28px]">Driller Resource Center</h3>
+          <div class="bg-white rounded-xl py-5 px-3 mx-1 flex flex-col gap-5">
+            <h4 class="text-[#777] text-xl text-center">
+              Procedure and Guideline Documents
+            </h4>
+            <div class="text-[#333] text-sm border-b pb-2">
+              <p class="font-bold">
+                Download Online Registration Guide Line
+              </p>
+              <p class="font-normal">
+                Meeting information and remote participation; Guidance for
+              </p>
+              <div class="flex gap-5 pt-2">
+                <button class="rounded-lg bg-[#43B3C6] text-[#C0EEF1] p-2 flex gap-2 items-center">
+                  <img src="../../../assets/images/temp/view.svg" alt="" />
+
+                  View
+                </button>
+                <button class="rounded-lg bg-[#43B3C6] text-[#C0EEF1] p-2 flex gap-2 items-center">
+                  <img src="../../../assets/images/temp/download.svg" alt="" />
+
+                  Download
+                </button>
+              </div>
+            </div>
+            <div class="text-[#333] text-sm border-b pb-2">
+              <p class="font-bold">
+                Download Offline Registration Guide Line
+              </p>
+              <p class="font-normal">
+                Meeting information and remote participation; Guidance for
+              </p>
+              <div class="flex gap-5 pt-2">
+                <button class="rounded-lg bg-[#43B3C6] text-[#C0EEF1] p-2 flex gap-2 items-center">
+                  <img src="../../../assets/images/temp/view.svg" alt="" />
+
+                  View
+                </button>
+                <button class="rounded-lg bg-[#43B3C6] text-[#C0EEF1] p-2 flex gap-2 items-center">
+                  <img src="../../../assets/images/temp/download.svg" alt="" />
+
+                  Download
+                </button>
+              </div>
+            </div>
+            <div class="text-[#333] text-sm border-b pb-2">
+              <p class="font-bold">
+                Download Online Registration Guide Line
+              </p>
+              <p class="font-normal">
+                Meeting information and remote participation; Guidance for
+              </p>
+              <div class="flex gap-5 pt-2">
+                <button class="rounded-lg bg-[#43B3C6] text-[#C0EEF1] p-2 flex gap-2 items-center">
+                  <img src="../../../assets/images/temp/view.svg" alt="" />
+                  View
+                </button>
+                <button class="rounded-lg bg-[#43B3C6] text-[#C0EEF1] p-2 flex gap-2 items-center">
+                  <img src="../../../assets/images/temp/download.svg" alt="" />
+
+                  Download
+                </button>
+              </div>
+            </div>
+            <div class=" text-sm flex gap-2">
+              <img src="../../../assets/images/temp/smallinfo.svg" alt="" />
+              <div>
+                <div>
+                  <p class="text-[#0CB9DE] font-bold ">
+                    Standard Procedures :
+                  </p>
+                  Meeting information and remote participation; Guidance for
+                </div>
+                <p class="text-[#0CB9DE]">
+                  the public; Service of process; and more…
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#EFEFEF] text-[#333] font-bold text-3xl py-2 rounded-xl">
+          <h3 class=" pl-3 pb-3">Having a Complain ?</h3>
+          <div class="rounded-xl bg-white p-3 mx-1 text-sm font-normal">
+            <div class="mx-5">
+              <div class="flex gap-3  flex-col">
+                <p class="font-semibold">Report Type</p>
+                <div class="flex justify-center gap-5">
+                  <button class="rounded py-3 bg-[#07912E] w-full text-white">
+                    Anonymous
+                  </button>
+                  <button class="rounded py-3 bg-white border-2 w-full text-[rgba(46, 2, 73, 0.30)]">
+                    Specified Identity
+                  </button>
+                </div>
+              </div>
+              <form class="flex flex-col gap-5 text-base py-10">
+                <input type="text" class="border-b-2 p-3 border-green-600" placeholder="Name" />
+                <div class="relative flex ">
+                  <img src="../../../assets/images/temp/email.svg" alt="" class="absolute top-5 left-3">
+                  <input type="email" class="border-b-2 p-3 w-full" />
+                </div>
+                <div class="relative flex ">
+                  <img src="../../../assets/images/temp/phone.svg" alt="" class="absolute top-5 left-3">
+                  <input type="number" class="border-b-2 p-3 w-full" />
+                </div>
+              </form>
+              <div class="flex gap-3  flex-col">
+                <p class="font-semibold">Report Type</p>
+                <div class="flex justify-center gap-5">
+                  <button class="rounded py-3 bg-[#07912E] w-full text-white">
+                    Concerns
+                  </button>
+                  <button class="rounded py-3 bg-white border-2 w-full text-[rgba(46, 2, 73, 0.30)]">
+                    Whistleblowing
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-5 pt-4">
+                <div class="w-full">
+                  <p class="border-b-2 border-[#07912E]">
+                    Tell Us Your Complain.
+                  </p>
+                  <textarea name="" id="" cols="30" rows="10" class="bg-[#F4EDED] w-full"></textarea>
+                </div>
+                <button type="submit"
+                  class="border bg-[#07912E] m-auto px-10 py-3 rounded-xl text-white flex items-center gap-2">
+                  <img src="../../../assets/images/temp/send.svg" alt="" />
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#EFEFEF] text-[#333] font-bold text-3xl py-2 rounded-xl">
+          <h3 class=" pl-3 pb-3">Register Driller Login</h3>
+          <div class="rounded-xl bg-white p-3 mx-1 text-sm font-normal flex gap-5 flex-col">
+            <p class="font-semibold text-xs">
+              All registered Drillers with Hydornet Access can login and
+              manage there accounts and operation activity with the
+              LASWARCO-Hydronet Suits
+            </p>
+            <div class="flex justify-center gap-5">
+              <button class="rounded py-3 bg-[#07912E] w-full text-white">
+                Login
+              </button>
+              <button class="rounded py-3 bg-white border-2 w-full text-[rgba(46, 2, 73, 0.30)]">
+                Don’t Have an Account
+              </button>
+            </div>
+            <form class="flex flex-col gap-5 mx-5">
+              <div class="relative flex ">
+                <input type="text" class="p-3 bg-[#F8F1FF] w-full" placeholder="Email" />
+                <img src="../../../assets/images/temp/user.svg" class="absolute right-5 top-3" alt="" />
+              </div>
+              <input type="text" class="p-3 bg-[#F8F1FF]" placeholder="Пароль" />
+              <button type="submit"
+                class="border bg-[#07912E] m-auto px-10 py-3 rounded-xl text-white flex items-center gap-2">
+                <img src="../../../assets/images/temp/send.svg" alt="" />
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

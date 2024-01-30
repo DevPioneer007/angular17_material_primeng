@@ -1,0 +1,138 @@
+<div class="bg-white px-4 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between gap-5 mt-4">
+  <div class="w-[55%] flex flex-col">
+    <div class="flex gap-2">
+      <img [src]="'../../../assets/images/dummyLogo.png'" alt="" class="w-24 h-24 rounded-2xl shadow-xl self-center hover:cursor-pointer" [routerLink]="['../order']" />
+      <div class="flex flex-col">
+        <h2 class="my-2 font-bold font-[Quicksand] text-xl">BOREHOLE WATER ANALYSIS</h2>
+        <div class="grid grid-cols-2 gap-4 mb-2">
+          <div class="bg-[#3BAAB1] rounded-md px-2 font-[Quicksand] text-sm text-center">
+            <p>Collection Scheduled Date</p>
+            <p class="font-bold">30-18-2023</p>
+          </div>
+          <div class="bg-[#3BAAB1] rounded-md px-2 font-[Quicksand] text-sm text-center">
+            <p>Estimated Result Date</p>
+            <p class="font-bold">30-18-2023</p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <div class="bg-[#39B6CC] text-white text-[10px] px-2 rounded-md">Requested By Info</div>
+          <div class="bg-[#E6F8FC] text-white text-[10px] px-2 rounded-md">Assigned Officer</div>
+          <div class="bg-[#E6F8FC] text-white text-[10px] px-2 rounded-md">Assigned Lab</div>
+        </div>
+      </div>
+    </div>
+    <div class="p-2">
+      <div class="flex">
+        <img src="../../../../assets/images/mark-avatar.png" alt="avatar" class="rounded-full w-6 h-6" />
+        <h2 class="text-lg font-bold font-[Quicksand] px-2 self-center">Mark Silver</h2>
+        <div class="rounded-full text-[8px] w-4 h-4 text-[#FF8427] bg-[#F3B382] self-center">
+          <i class="pi pi-check"></i>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 text-xs text-[#121212] mt-4">
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/locationBlue.svg" alt="" class="w-4" />
+          <p class="font-[MontserratAlternates]">Company Address</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/phoneBlue.svg" alt="" class="w-4" />
+          <p class="font-[MontserratAlternates]">123 456 789</p>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex gap-2 items-center">
+            <img src="../../../assets/icons/websiteBlue.svg" alt="" class="w-4" />
+            <p class="font-[MontserratAlternates]">123456</p>
+          </div>
+          <div class="flex gap-2 items-center">
+            <img src="../../../assets/icons/emailBlue.svg" alt="" class="w-4" />
+            <p class="font-[MontserratAlternates]">exam&#64;gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-[45%] mr-8 flex flex-col my-2">
+    <div class="flex gap-2 self-center">
+      <div class="bg-[#39B6CC] text-white text-[10px] px-2 rounded-md">Activity Tracker</div>
+      <div class="bg-[#E6F8FC] text-white text-[10px] px-2 rounded-md">Analysis Report/ Result</div>
+    </div>
+    <div class="my-2 flex text-center">
+      <div class="rounded-xl bg-[#75E9E2] border border-[#266B5F] text-[#266B5F] webkit-center w-[15%] py-2 flex flex-col justify-between">
+        <i class="pi pi-credit-card text-xs"></i>
+        <p class="text-[10px]">Submission</p>
+        <div class="rounded-full w-3 self-center">
+          <i class="rounded-full px-[2px] text-xs pi pi-check bg-[#266B5F] text-[#75E9E2]"></i>
+        </div>
+      </div>
+      <div class="self-center w-[6.25%]">
+        <div class="h-2 bg-[#75E9E2]"></div>
+      </div>
+      <div class="rounded-xl bg-[#75E9E2] border border-[#266B5F] text-[#266B5F] webkit-center w-[15%] py-2 flex flex-col justify-between">
+        <i class="pi pi-credit-card text-xs"></i>
+        <p class="text-[10px]">Sample Pick up</p>
+        <div class="rounded-full w-3 self-center">
+          <i class="rounded-full px-[2px] text-xs pi pi-check bg-[#266B5F] text-[#75E9E2]"></i>
+        </div>
+      </div>
+      <div class="self-center w-[6.25%]">
+        <div class="h-2 bg-[#75E9E2]"></div>
+      </div>
+      <div class="rounded-xl bg-[#75E9E2] border border-[#266B5F] text-[#266B5F] webkit-center w-[15%] py-2 flex flex-col justify-between">
+        <i class="pi pi-credit-card text-xs"></i>
+        <p class="text-[10px]">Lab Analysis</p>
+        <div class="rounded-full w-3 self-center">
+          <i class="rounded-full px-[2px] text-xs pi pi-check bg-[#266B5F] text-[#75E9E2]"></i>
+        </div>
+      </div>
+      <div class="self-center w-[6.25%]">
+        <div class="h-2 bg-[#75E9E2]"></div>
+      </div>
+      <div class="rounded-xl bg-[#75E9E2] border border-[#266B5F] text-[#266B5F] webkit-center w-[15%] py-2 flex flex-col justify-between">
+        <i class="pi pi-credit-card text-xs"></i>
+        <p class="text-[10px]">Result Issued</p>
+        <div class="rounded-full w-3 self-center">
+          <i class="rounded-full px-[2px] text-xs pi pi-check bg-[#266B5F] text-[#75E9E2]"></i>
+        </div>
+      </div>
+      <div class="self-center w-[6.25%]">
+        <div class="h-2 bg-[#75E9E2]"></div>
+      </div>
+      <div class="rounded-xl bg-[#75E9E2] border border-[#266B5F] text-[#266B5F] webkit-center w-[15%] py-2 flex flex-col justify-between">
+        <i class="pi pi-credit-card text-xs"></i>
+        <p class="text-[10px]">Result Delivered</p>
+        <div class="rounded-full w-3 self-center">
+          <i class="rounded-full px-[2px] text-xs pi pi-check bg-[#266B5F] text-[#75E9E2]"></i>
+        </div>
+      </div>
+    </div>
+    <div class="p-2 rounded-lg border border-[#0CB9DE] bg-[#E6F8FC] mt-2">
+      <div class="flex">
+        <img src="../../../../assets/images/mark-avatar.png" alt="avatar" class="rounded-full w-5 h-5 self-center" />
+        <h2 class="text-md font-bold font-[Quicksand] px-2 self-center">Mark Silver</h2>
+        <div class="w-3 h-3">
+          <i class="rounded-full text-[#FF8427] bg-[#F3B382] text-[8px] pi pi-check"></i>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 text-xs text-[#121212] mt-2">
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/locationBlue.svg" alt="" class="w-4" />
+          <p class="font-[MontserratAlternates]">Company Address</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/phoneBlue.svg" alt="" class="w-4" />
+          <p class="font-[MontserratAlternates]">123 456 789</p>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex gap-2 items-center">
+            <img src="../../../assets/icons/websiteBlue.svg" alt="" class="w-4" />
+            <p class="font-[MontserratAlternates]">123456</p>
+          </div>
+          <div class="flex gap-2 items-center">
+            <img src="../../../assets/icons/emailBlue.svg" alt="" class="w-4" />
+            <p class="font-[MontserratAlternates]">exam&#64;gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

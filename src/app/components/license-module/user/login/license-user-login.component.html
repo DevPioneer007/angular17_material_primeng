@@ -1,0 +1,29 @@
+<div>
+  <div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+    <div class="border-b-[2px] border-black py-2">
+      <button
+        class="text-md text-white font-bold font-[Quicksand] p-1 mr-4 rounded-md bg-[#0CB9DE] hover:opacity-70">User
+        Login</button>
+      <button class="text-md text-gray-700 font-bold font-[Quicksand] p-1 rounded-md bg-gray-300 hover:opacity-70">User
+        Signup</button>
+    </div>
+    <div class="py-4 mt-2">
+      <div class="grid grid-cols-2 gap-4">
+        <span class="p-float-label p-input-icon-right">
+          <i class="pi pi-envelope"></i>
+          <input pInputText id="username" [(ngModel)]="username" class="w-full border rounded-md p-2" />
+          <label for="username">Username</label>
+        </span>
+        <span class="p-float-label password-input">
+          <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
+          <label for="password">Password</label>
+        </span>
+      </div>
+      <button class="text-red-700 underline my-4">Forgot password?</button>
+      <div class="text-center"><button
+          class="my-2 px-8 py-2 text-white font-semibold bg-[#0CB9DE] rounded-lg text-md font-[Quicksand]">Login</button>
+      </div>
+    </div>
+  </div>
+  <app-verify-content></app-verify-content>
+</div>

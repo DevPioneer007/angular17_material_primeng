@@ -1,0 +1,90 @@
+<div>
+  <landing-sidebar></landing-sidebar>
+  <div class="bg-[#E7F4F5] flex flex-col min-h-screen">
+    <app-logobar></app-logobar>
+    <div class="bg-white rounded-2xl p-4 border shadow-sm m-4 relative">
+      <div class="px-4 py-2 bg-[#E7F4F5] w-fit rounded-md">
+        <p class="text-[#121212] text-[20px] font-[MontserratAlternates] font-semibold">Featured</p>
+      </div>
+      <div class="flex gap-2 flex-nowrap">
+        <app-featured-box [companyList]="allFeaturedCompanies" class="w-full" />
+      </div>
+    </div>
+    <div *ngIf="uidn || businessName || locationId">
+      <div class="m-2 px-2">
+        <div class="w-fit rounded-full flex gap-3 items-center bg-[#0CB9DE] px-8 py-2">
+          <p class="text-xl lg:text-2xl text-white font-[Quicksand] font-semibold">Search Result |</p>
+          <div *ngIf="properCompanies; else noResult">
+            <p class="text-xl lg:text-2xl text-white font-[Quicksand] font-semibold">
+              {{properCompanies.length}}</p>
+          </div>
+          <ng-template #noResult>
+            <p class="text-xl lg:text-2xl text-white font-[Quicksand] font-semibold">0</p>
+          </ng-template>
+          <p class="text-base text-white font-[Quicksand] opacity-50 font-semibold">Results Found</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-4 border shadow-sm m-4 flex-grow">
+      <div class="flex flex-col sm:flex-row gap-1 justify-between ">
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/filter.svg" alt="" class="w-5 h-5" />
+          <mat-select placeholder="All Service Location" (selectionChange)="changeLocation($event.value)"
+            [value]="this.locationId"
+            class="search-location border-[#0CB9DE] border outline-none text-[#0CB9DE] text-sm px-2 py-1 rounded-full bg-white min-w-[100px] text-center font-[MontserratAlternates]">
+            <mat-option *ngFor="let location of locations" [value]="location.id" class=" font-[MontserratAlternates]">{{
+              location.lgName }}</mat-option>
+          </mat-select>
+          <mat-select placeholder="Recommended" (selectionChange)="setFilterOption($event.value)"
+            [value]="isPreferred ? 'isPreferred' : 'Any'"
+            class="search-location border-[#0CB9DE] border outline-none text-[#0CB9DE] text-sm px-2 py-1 rounded-full bg-white min-w-[100px] text-center font-[MontserratAlternates]">
+            <mat-option *ngFor="let filter_type of filter_types" [value]="filter_type"
+              class=" font-[MontserratAlternates]">
+              {{filter_type}}
+            </mat-option>
+          </mat-select>
+        </div>
+        <div class="border-[#63CCD3] border-2 rounded-full hidden  sm:flex  dm items-center  ">
+          <div *ngIf="displayWay == 'list'; else notList"
+            class="flex gap-2 items-center rounded-full   h-full px-6 py-2 bg-[#0CB9DE]">
+            <img src="../../../assets/icons/showListSel.svg" alt="" class="w-5 h-5" />
+          </div>
+          <ng-template #notList>
+            <button (click)="changeDisplayWay('list')"
+              class="flex gap-2 items-center rounded-full text-white bg-white px-4 py-2 h-full">
+              <img src="../../../assets/icons/showList.svg" alt="" class="w-5 h-5" />
+            </button>
+          </ng-template>
+          <div *ngIf="displayWay == 'grid'; else notGrid"
+            class="flex gap-2 items-center rounded-full  bg-[#0CB9DE] px-6 py-2 h-full">
+            <img src="../../../assets/icons/showGridSel.svg" alt="" class="w-5 h-5" />
+          </div>
+          <ng-template #notGrid>
+            <button (click)="changeDisplayWay('grid')"
+              class="flex gap-2 items-center rounded-full text-white bg-white  px-4 py-2 h-full">
+              <img src="../../../assets/icons/showGrid.svg" alt="" class="w-5 h-5" />
+            </button>
+          </ng-template>
+        </div>
+      </div>
+      <div *ngIf="properCompanies?.length != 0;else notFound">
+        <div class="hidden sm:block">
+          <div *ngIf="displayWay == 'grid'; else notGridList" class="grid grid-cols-2 gap-2 flex">
+            <app-driller-license *ngFor="let choi of properCompanies" [oneChoice]="choi" />
+          </div>
+          <ng-template #notGridList>
+            <div class="grid grid-cols-1 gap-2 flex">
+              <app-driller-license-list *ngFor="let choi of properCompanies" [oneChoice]="choi" />
+            </div>
+          </ng-template>
+        </div>
+        <div class="grid flex sm:hidden grid-cols-1 gap-2">
+          <app-driller-license-list *ngFor="let choi of properCompanies" [oneChoice]="choi" />
+        </div>
+        <div>
+        </div>
+      </div>
+      <ng-template #notFound>
+        <p class="text-2xl font-bold p-8">Not Found Any Data</p>
+      </ng-template>
+    </div>

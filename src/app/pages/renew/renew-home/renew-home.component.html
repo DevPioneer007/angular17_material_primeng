@@ -1,0 +1,118 @@
+<div>
+  <div class="">
+    <landing-navbar></landing-navbar>
+    <div class="relative background-black overflow-hidden">
+      <video autoplay muted loop id="myVideo" class="absolute min-w-full min-h-full object-cover ">
+        <source
+          [src]="this.videoLink"
+          type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="absolute inset-0 z-1 bg-black opacity-50"></div>
+      <div
+        class="relative z-10 flex mt-5 pt-0 flex-col relative justify-center items-center pb-[5rem] px-3 min-h-[calc(100vh-5rem)] bg-no-repeat bg-cover">
+<!-- <landing-sidebar></landing-sidebar> -->
+
+      <div class="font-bold text-center font-[Moul] text-[#96E8EE] 1xl:text-[40px] text-[28px] p-2">
+        Borehole Driller License Renewal
+        <span class="text-[#19B6D1] font-bold font-[Moul]">Lagos State</span>
+      </div>
+      <p class="max-w-[65rem] font-[Montserrat] text-center font-[1000] text-[18px] 1xl:text-[24px] text-white">
+        LSWRC Renewal Borehole drilling must be carried out by certified Drillers.
+      </p>
+
+      <div
+        class="bg-[rgba(98,204,211,0.75)] mt-4 mb-6 p-5 flex items-center flex-wrap rounded-3xl gap-5 shadow-lg shadow-gray-200">
+        <div class="flex gap-2">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center">
+            <img src="/assets/icons/people.svg" alt="" class="w-9 h-9" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Total Driller Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">6,000</p>
+            <p class="text-[#C6E0FF] flex items-center text-sm">
+              <mat-icon class="text-[#2190A4]">arrow_upward</mat-icon>
+
+              <span class="text-[#2190A4]">16%</span> this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
+        <div class="flex items-center gap-2">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center">
+            <img src="/assets/icons/people.svg" alt="" class="w-9 h-9" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Active Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">1823</p>
+            <p class="text-[#C6E0FF] text-sm flex items-center">
+              <mat-icon class="text-[#D0004B]">arrow_downward</mat-icon>
+
+              <span class="text-[#D0004B]">16%</span>this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
+        <div class="flex items-center gap-2">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center">
+            <img src="/assets/icons/people.svg" alt="" class="w-9 h-9" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Expired Licesnse</p>
+            <p class="text-[#235C66] text-xl font-bold">1823</p>
+            <p class="text-[#C6E0FF] text-sm flex items-center">
+              <mat-icon class="text-[#D0004B]">arrow_downward</mat-icon>
+
+              <span class="text-[#D0004B]">16%</span>this month
+            </p>
+          </div>
+        </div>
+        <div class="h-full w-0.5 bg-[#F0F0F0]"></div>
+        <div class="flex items-center gap-2">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-14 h-14 flex items-center justify-center">
+            <img src="/assets/icons/drillers.svg" alt="" class="w-9 h-9" />
+          </div>
+          <div>
+            <p class="text-white text-xs font-bold">Active Drillers</p>
+            <p class="text-[#235C66] text-xl font-bold">1823</p>
+            <p class="text-[#C6E0FF] text-sm -translate-x-[2rem] flex items-center">
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                class="object-cover rounded-full border-4 border-[#62CCD3] h-9 translate-x-[1.2rem] w-9" />
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                class="object-cover rounded-full border-4 border-[#62CCD3] h-9 translate-x-[0.6rem] w-9" />
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8fDA%3D"
+                class="object-cover rounded-full border-4 border-[#62CCD3] h-9 w-9" />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-transparent min-w-[800px] my-2 webkit-center">
+        <p class="text-[#CAE8EA] text-center font-[Moulpali] text-[16px]">
+          Enter you Lagos State Water Regulatory Commssions’ Issued Identification
+          Number
+        </p>
+        <div class="px-4 py-2 rounded-xl bg-[#D1F4F7] border w-[75%] my-2">
+          <p class="text-xl text-[#262729] font-bold mb-2">License Renewal</p>
+          <div class="flex items-center gap-2 border-2 border-gray-700 bg-white py-1 px-2 rounded-full h-[50px] pl-5">
+            <img src="/assets/icons/locFil.svg" alt="" class="w-6 h-6" />
+            <input type="text" placeholder="Enter Your LSWRCUID"
+              class="border-none outline-none px-4 py-2 text-sm w-[85%]" />
+
+            <a [routerLink]="['workflow']"
+              class="flex items-center gap-4 pl-4 pr-6 py-1 bg-[#63CCD3] rounded-full text-white font-bold">
+              <img src="/assets/icons/search.svg" alt="" class="w-5 h-5" />
+              <p class="text-[10.38px] font-bold">Search</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

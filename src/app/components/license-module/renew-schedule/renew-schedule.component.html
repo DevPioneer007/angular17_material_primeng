@@ -1,0 +1,33 @@
+<div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+  <h2 class="text-3xl font-bold text-center font-[Quicksand] mt-4">License Schedule</h2>
+  <div class="w-full flex items-center mt-4">
+    <div class="w-[50%] webkit-center">
+      <circle-progress [percent]="75" [radius]="90" [outerStrokeWidth]="16" [showSubtitle]="false" [showUnits]="false"
+        titleFontSize="24" titleFontWeight="700" titleColor="#0CB9DE" [outerStrokeColor]="'#0CB9DE'" [animation]="true"
+        title="121 Days" [animationDuration]="300"></circle-progress>
+      <h2 class="text-xl text-[#0CB9DE] font-bold font-[Quicksand] text-center mb-2">Days to Expire</h2>
+    </div>
+    <div class="border-l-2 h-48 mx-4 mb-8 border-[#0CB9DE]"></div>
+    <div class="w-[50%] flex flex-col items-center xl:px-12 lg:px-8 px-4">
+      <div class="w-full grid grid-cols-2 gap-2 mb-4">
+        <p class="text-md font-bold font-[Quicksand] self-center">Total Renewals</p>
+        <p class="text-[#0CB9DE] text-2xl font-bold">6</p>
+      </div>
+      <div class="w-full grid grid-cols-2 gap-2 mb-4">
+        <p class="text-md font-bold font-[Quicksand] self-center">License Expiry Date</p>
+        <p class="w-fit bg-[#F36262] xl:text-lg text-sm text-white text-center rounded-lg px-2">12th Feburary 2024</p>
+      </div>
+      <div class="w-full grid grid-cols-2 gap-2 mb-4">
+        <p class="text-md font-bold font-[Quicksand] self-center">Location rating</p>
+        <div class="flex gap-2 items-center mt-2">
+          <div *ngFor="let rating of ratings; let i = index">
+            <img src="../../../assets/images/star.png" alt="" class="bg-[#0CB9DE] w-8 h-8 p-1 rounded-full" />
+          </div>
+        </div>
+      </div>
+      <button class="rounded-full px-8 py-2 bg-[#0CB9DE] text-white text-md font-bold font-[Quicksand]"
+        [routerLink]="['../user-login']">Renew License
+      </button>
+    </div>
+  </div>
+</div>

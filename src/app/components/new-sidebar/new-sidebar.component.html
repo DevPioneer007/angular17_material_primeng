@@ -1,0 +1,87 @@
+<div
+  class="bg-white border-gray-300 rounded-2xl shadow-xl mt-16 overflow-hidden fixed left-8 top-1/2 transform -translate-y-1/2 w-64 h-[75vh] flex flex-col justify-between">
+  <div class="bg-[#63CCD3] font-[Quicksand] rounded-t-2xl text-white text-center p-4 flex w-full justify-between">
+    <div class="bg-[#B4E8EC] rounded-full p-1 grid grid-cols-2 w-[85%] ">
+      <button
+        [className]="registMode?'rounded-full px-4 py-1 bg-[#63CCD3] text-white text-xs':'rounded-full px-4 py-1 bg-[#B4E8EC] text-[#1E6064] text-xs'"
+        (click)="setMenuMode(true)">Registration</button>
+      <button
+        [className]="registMode?'rounded-full px-4 py-1 bg-[#B4E8EC] text-[#1E6064] text-xs':'rounded-full px-4 py-1 bg-[#63CCD3] text-white text-xs'"
+        (click)="setMenuMode(false)">Tool</button>
+    </div>
+    <button class="w-6 h-full self-center">
+      <i class="pi pi-ellipsis-v text-[#1E6064]"></i>
+    </button>
+  </div>
+  <div class="overflow-auto divide-y divide-gray-300 flex flex-col flex-auto">
+    <!-- Parent item, collapsible menu -->
+    <div>
+      <p class="m-4 px-4 text-gray-500 text-xs">COMPLIANCE</p>
+      <div class="pl-4 border-b-1 border-gray-500">
+        <div *ngFor="let item of items" class="my-2">
+          <div class="hover:bg-gray-100 px-4 py-1 cursor-pointer font-[Quicksand] flex justify-between"
+            (click)="toggleCollapse(item)">
+            <div [className]="item.collapsed?'flex items-center text-gray-500':'flex items-center'">
+              <i [className]="item.icon"></i>
+              <a class="w-full px-2">
+                {{item.label}}</a>
+            </div>
+            <i *ngIf="item.collapsible"
+              [className]="item.collapsed?'pi pi-angle-down text-lg text-gray-500':'pi pi-angle-up text-lg'"></i>
+          </div>
+          <div [className]="item.collapsed ? 'hidden':''">
+            <div class="pl-6" *ngIf="item.collapsible">
+              <div *ngFor="let child of item.items"
+                class="py-2 text-gray-500 hover:text-black hover:bg-gray-100 hover:cursor-pointer border-l-2 border-gray-300">
+                <a class="pl-4 text-sm" [routerLink]="child.link">{{child.label}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="m-4 px-4 text-gray-500 text-xs">SETTINGS</p>
+      <div class="pl-4 border-b-1 border-gray-500">
+        <div *ngFor="let item of others" class="my-2">
+          <div class="hover:bg-gray-100 px-4 py-1 cursor-pointer font-[Quicksand] flex justify-between"
+            (click)="toggleCollapse(item)">
+            <div [className]="item.collapsed?'flex items-center text-gray-500':'flex items-center'">
+              <i [className]="item.icon"></i>
+              <a class="w-full px-2">
+                {{item.label}}</a>
+            </div>
+            <i *ngIf="item.collapsible"
+              [className]="item.collapsed?'pi pi-angle-down text-lg text-gray-500':'pi pi-angle-up text-lg'"></i>
+          </div>
+          <div [className]="item.collapsed ? 'hidden':''">
+            <div class="pl-6" *ngIf="item.collapsible">
+              <div *ngFor="let child of item.items"
+                class="py-2 text-gray-500 hover:text-black hover:bg-gray-100 hover:cursor-pointer border-l-2 border-gray-300">
+                <a class="pl-4 text-sm" [routerLink]="child.link">{{child.label}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-8 py-4 bg-gray-100 border-t border-gray-300">
+    <div class="p-1 bg-gray-200 grid grid-cols-2 gap-2 rounded-xl">
+      <button
+        [className]="!darkMode?'border border-gray-300 bg-white rounded-lg flex items-center justify-center p-2 ':'text-gray-800 flex items-center justify-center p-2 '"
+        (click)="setDarkMode(false)"
+        >
+        <i class="pi pi-sun"></i>
+        <p class="text-sm px-2">Light</p>
+      </button>
+      <button
+        [className]="darkMode?'border border-gray-300 bg-white rounded-lg flex items-center justify-center p-2 ':'text-gray-800 flex items-center justify-center p-2 '"
+        (click)="setDarkMode(true)"
+        >
+        <i class="pi pi-moon"></i>
+        <p class="text-sm px-2">Dark</p>
+      </button>
+    </div>
+  </div>
+</div>

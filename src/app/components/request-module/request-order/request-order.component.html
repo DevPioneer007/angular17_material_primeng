@@ -1,0 +1,169 @@
+<div class="my-4">
+  <app-stepper [curStep]="curStep" [steps]="steps" class="w-full"></app-stepper>
+  <div class="grid md:grid-cols-2 gap-4">
+    <div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+      <div class="">
+        <h2 class="text-lg font-bold font-[Quicksand]">Submit a Lab Analysis request</h2>
+        <p class="text-xs py-2 font-[Quicksand]">As a regulatory commission, we would need to verify your identification
+          and business
+          registration Information</p>
+      </div>
+      <div class="grid grid-cols-4 gap-4 p-4">
+        <div
+          class="rounded-lg shadow-xl hover:bg-[#0CB9DE] duration-200 hover:text-white text-[#0CB9DE] flex flex-col items-center text-center">
+          <img src="../../../../assets/images/otherTab1.png" alt="Image" class="w-16 h-16">
+          <p class="font-bold text-sm  ">WELL WATER ANALYSIS</p>
+        </div>
+        <div
+          class="rounded-lg shadow-xl hover:bg-[#0CB9DE] duration-200 hover:text-white text-[#0CB9DE] flex flex-col items-center text-center">
+          <img src="../../../../assets/images/otherTab2.png" alt="Image" class="w-16 h-16">
+          <p class="font-bold text-sm  ">SEWAGE ANALYSIS</p>
+        </div>
+        <div
+          class="rounded-lg shadow-xl hover:bg-[#0CB9DE] duration-200 hover:text-white text-[#0CB9DE] flex flex-col items-center text-center">
+          <img src="../../../../assets/images/otherTab3.png" alt="Image" class="w-16 h-16">
+          <p class="font-bold text-sm  ">STRUCTURE ANALYSIS</p>
+        </div>
+        <div
+          class="rounded-lg shadow-xl hover:bg-[#0CB9DE] duration-200 hover:text-white text-[#0CB9DE] flex flex-col items-center text-center">
+          <img src="../../../../assets/images/otherTab4.png" alt="Image" class="w-16 h-16">
+          <p class="font-bold text-sm  ">SOIL ANALYSIS</p>
+        </div>
+      </div>
+      <div class="my-2">
+        <h2 class="text-lg font-bold">Personal information</h2>
+        <div class="flex justify-around mt-4 ">
+          <img src="../../../../assets/images/mark-avatar.png" alt="avatar" class="w-16 h-16 rounded-full self-center">
+
+          <div id="drop-zone" (drop)="onFilesDropped($event)" (dragover)="onDragOver($event)"
+            class="h-24 w-[80%] border-2 border-light-blue-500 border-dashed rounded-xl flex justify-center items-center cursor-pointer">
+
+            <div class="w-full flex justify-around items-center p-2">
+              <div *ngIf="files.length === 0; else fileList" class="flex">
+                <div class="self-center">
+                  <i class="pi pi-upload text-gray-500 px-2"></i>
+                </div>
+                <div class="px-2">
+                  <p class="font-[Quicksand] text-gray-700 text-sm ">Select a ID card or drag & drop here.</p>
+                  <p class="font-[Quicksand] text-gray-400 text-xs ">JPG, PNG or PDF file size no more than 10MB</p>
+                </div>
+              </div>
+
+              <ng-template #fileList>
+                <p class="text-md text-gray-700 font-[Quicksand] " *ngFor="let file of files">{{ file.name }}</p>
+              </ng-template>
+
+              <button class="bg-[#0CB9DE] text-white py-1 px-2 rounded text-xs" (click)="fileUploadInput.click()">
+                Select File
+              </button>
+
+              <input type="file" #fileUploadInput (change)="onFilesSelected($event)" class="hidden" multiple>
+            </div>
+
+          </div>
+        </div>
+        <div class="mt-2">
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Application</p>
+            <input pInputText placeholder="Input Your Full Name"
+              class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Email</p>
+            <input pInputText placeholder="Email" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Phone Number</p>
+            <input pInputText placeholder="+1 234 567 890" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+        </div>
+      </div>
+      <div class="my-2">
+        <h2 class="text-lg font-bold">Residential information</h2>
+        <div class="mt-2">
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Site Owner</p>
+            <input pInputText placeholder="Input Owner Name" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Address</p>
+            <input pInputText placeholder="Input Address" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">State & Zipcode</p>
+            <input pInputText placeholder="123456" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Local Government</p>
+            <input pInputText placeholder="Government Id" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 text-center">
+        <button class="text-sm text-white font-[Quicksand] font-bold px-4 py-2 rounded-full bg-[#0CB9DE]" [routerLink]="['../payment']">Save &
+          Proceed</button>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-2xl shadow-xl mt-4 flex flex-col flex-grow">
+      <div class="">
+        <h2 class="text-lg font-bold font-[Quicksand]">Address <span
+            class="text-[#0CB9DE] font-[Quicksand]">Validation</span></h2>
+      </div>
+      <div class="my-4">
+        <div class="grid grid-cols-3 gap-2 py-1">
+          <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Application</p>
+          <input pInputText placeholder="Input Your Full Name" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">State</p>
+            <input pInputText placeholder="State" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Country</p>
+            <input pInputText placeholder="Country" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 py-1">
+          <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Zip Code</p>
+          <input pInputText placeholder="Postal Code / Zip Code"
+            class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Latitude</p>
+            <input pInputText placeholder="Latitude" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+          <div class="grid grid-cols-3 gap-2 py-1">
+            <p class="col-span-1 font-[Quicksand] text-sm font-bold self-center">Longitude</p>
+            <input pInputText placeholder="Longitude" class="col-span-2 border rounded-md px-2 py-1 text-sm" />
+          </div>
+        </div>
+        <div class="flex gap-2 items-center my-2">
+          <input type="checkbox" name="" id="" />
+          <p class="text-[11px] text-gray-600">
+            I confirm that every information provided is correct and can be authenticated using the below uploaded
+            files.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center my-4">
+          <label for="file" class="border-2 border-dashed border-gray-400 px-8 py-4 cursor-pointer">
+            <div class="flex justify-center">
+              <img src="../../../assets/images/upload.png" alt="" class="mr-4">
+              <span class="text-gray-400">{{ "Upload Proof of Address" }}</span>
+            </div>
+            <input class="hidden" id="file" type="file">
+          </label>
+        </div>
+      </div>
+      <div class="flex-grow">
+        <div class="w-full h-full border-8 rounded-b-2xl border-[#0CB9DE]">
+          <iframe class="w-full h-full rounded-b-2xl" style="border:0" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBNe2e2H0-Fy41Ai3ZXTGl-kdLV4ZbT5dY
+        &q=Space+Needle,Seattle+WA">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

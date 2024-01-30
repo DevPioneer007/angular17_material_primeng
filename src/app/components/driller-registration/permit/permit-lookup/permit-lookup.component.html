@@ -1,0 +1,175 @@
+<div>
+  <app-driller-stepper [curStep]="curStep" [steps]="steps" />
+  <div class="grid grid-cols-2 gap-2 p-4">
+    <div class="bg-white shadow-xl rounded-xl p-4">
+      <div class="my-2">
+        <h2 class="text-lg font-bold">Manage Your Registration easily with a Hydronet Driller Account </h2>
+        <p class="text-xs py-2"><span class="font-bold text-[#39B6CC] underline">Login</span> If you have an Account
+          with us or Complete the SIgnup Process to continue wit your Registration</p>
+        <div class="w-full my-2 flex justify-end px-4">
+          <button class="bg-[#39B6CC] text-xs px-2 py-1 rounded-lg text-white">Add More</button>
+        </div>
+      </div>
+      <div>
+        <div class="my-4">
+          <input pInputText placeholder="Select Authority "
+            class="w-1/2 border-b focus:border-[#0CB9DE] p-2 text-sm outline-none" />
+          <div class="flex gap-2 items-center p-2">
+            <input type="checkbox" name="" id="" />
+            <p class="text-sm text-[#121212]">
+              Activate Hydronet Application
+            </p>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 mb-2">
+              Attach a scan copy, file should not exceed 2MB
+            </p>
+            <div class="w-2/3 flex flex-col justify-center">
+              <label for="file" class="border-2 border-dashed border-gray-400 p-8 cursor-pointer">
+                <div class="flex justify-center">
+                  <img src="../../../assets/images/upload.png" alt="" class="mr-4">
+                  <span class="text-gray-400">{{ "Upload Additional file" }}</span>
+                </div>
+                <input class="hidden" id="file" type="file">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="my-4">
+          <input pInputText placeholder="Select Authority "
+            class="w-1/2 border-b focus:border-[#0CB9DE] p-2 text-sm outline-none" />
+          <div class="flex gap-2 items-center p-2">
+            <input type="checkbox" name="" id="" />
+            <p class="text-sm text-[#121212]">
+              Activate Hydronet Application
+            </p>
+          </div>
+          <div>
+            <p class="text-xs text-gray-500 mb-2">
+              Attach a scan copy, file should not exceed 2MB
+            </p>
+            <div class="w-2/3 flex flex-col justify-center">
+              <label for="file" class="border-2 border-dashed border-gray-400 p-8 cursor-pointer">
+                <div class="flex justify-center">
+                  <img src="../../../assets/images/upload.png" alt="" class="mr-4">
+                  <span class="text-gray-400">{{ "Upload Additional file" }}</span>
+                </div>
+                <input class="hidden" id="file" type="file">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex gap-2 items-center mt-2">
+          <input type="checkbox" name="" id="" />
+          <p class="text-[11px] text-[#121212] p-2">
+            I certify to providing correct and authentic information
+          </p>
+        </div>
+        <div>
+          <p class="text-[11px] text-[#121212]">
+            Curating and advising outstanding impact projects is our bread and butter- and it's also a lot of work 😅.
+            Every listing on this site is copy written, edited, and curated by our internal team. We also produce and
+            edit
+            most project videos for our small
+          </p>
+          <p class="text-xs text-gray-300">More</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-2xl shadow-xl flex flex-col flex-grow justify-between">
+      <div>
+        <div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+          <h2 class="text-lg font-bold text-[#148A92] mt-4">Comppliance Score Card & Tracker</h2>
+          <div class="w-full flex items-center mt-4">
+            <div class="w-[35%] webkit-center">
+              <circle-progress [percent]="80" [radius]="50" [outerStrokeWidth]="16" [showSubtitle]="false"
+                [showUnits]="false" titleFontSize="24" titleFontWeight="700" titleColor="#0CB9DE"
+                [outerStrokeColor]="'#0CB9DE'" [animation]="true" title="8 / 10"
+                [animationDuration]="300"></circle-progress>
+              <h2 class="text-md text-[#148A92] font-bold text-center mb-2">Validation</h2>
+            </div>
+            <div class="border-l-2 h-32 mx-4 mb-8 border-[#148A92]"></div>
+            <div class="w-[65%] flex flex-col items-center xl:px-4 lg:px-2">
+              <div class="w-full grid grid-cols-2 gap-2 mb-2">
+                <p class="text-xs self-center">Total Document App</p>
+                <p class="text-[#0CB9DE] text-2xl font-bold">6</p>
+              </div>
+              <div class="w-full grid grid-cols-2 gap-2 mb-2">
+                <p class="text-xs self-center">Rejected</p>
+                <p class="w-fit bg-[#F36262] text-xs text-white text-center rounded-lg px-2">8 Document</p>
+              </div>
+              <div class="w-full grid grid-cols-2 gap-2 mb-2">
+                <p class="text-xs self-center">Validation rating</p>
+                <div class="flex gap-1 items-center mt-2">
+                  <div *ngFor="let rating of ratings; let i = index"
+                    class="flex items-center p-[2px] bg-[#148A92] w-5 h-5 rounded-full">
+                    <img src="../../../assets/images/star.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <button class="rounded-full px-4 py-1 my-2 bg-[#148A92] text-white text-sm"
+                [routerLink]="['../user-login']">Fix
+                Submission
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+          <h2 class="text-lg font-bold text-[#148A92] mt-4">Business Documents</h2>
+          <div class="my-4">
+            <div class="flex my-4">
+              <div class="bg-[#0CB9DE] rounded-full w-5 h-5 flex items-center justify-center text-white">
+                <i class="pi pi-check text-xs"></i>
+              </div>
+              <p class="text-sm px-4">CAC 2</p>
+            </div>
+            <div class="flex my-4">
+              <div class="bg-[#0CB9DE] rounded-full w-5 h-5 flex items-center justify-center text-white">
+                <i class="pi pi-check text-xs"></i>
+              </div>
+              <p class="text-sm px-4">CAC 5</p>
+            </div>
+            <div class="flex my-4">
+              <div class="bg-[#0CB9DE] rounded-full w-5 h-5 flex items-center justify-center text-white">
+                <i class="pi pi-check text-xs"></i>
+              </div>
+              <p class="text-sm px-4">CAC 7</p>
+            </div>
+            <div class="flex my-4">
+              <div class="bg-[#E74A3B] rounded-full w-5 h-5 flex items-center justify-center text-white">
+                <i class="pi pi-times text-xs"></i>
+              </div>
+              <p class="text-sm px-4">Certificate of Incorporation</p>
+            </div>
+            <div class="flex my-4">
+              <div class="bg-[#E74A3B] rounded-full w-5 h-5 flex items-center justify-center text-white">
+                <i class="pi pi-times text-xs"></i>
+              </div>
+              <p class="text-sm px-4">Memorandum of Association</p>
+            </div>
+            <div class="flex my-4">
+              <div class="bg-[#E74A3B] rounded-full w-5 h-5 flex items-center justify-center text-white">
+                <i class="pi pi-times text-xs"></i>
+              </div>
+              <p class="text-sm px-4">Article of Association</p>
+            </div>
+            <div class="flex my-4">
+              <div class="bg-[#E74A3B] rounded-full w-5 h-5 flex items-center justify-center text-white">
+                <i class="pi pi-times text-xs"></i>
+              </div>
+              <p class="text-sm px-4">Annual Report</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center my-4 flex-col">
+        <button
+          class="w-3/4 px-8 py-2 text-lg bg-[#0CB9DE] duration-300 hover:opacity-50 font-bold text-white rounded-xl my-2"
+          [routerLink]="['../validate']">Submit
+          & Validate</button>
+      </div>
+    </div>
+  </div>
+</div>

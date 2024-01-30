@@ -1,0 +1,18 @@
+<div class="bg-white p-6 shadow-md rounded-2xl text-black flex">
+	<h2 class="w-[35%] font-bold font-[Quicksand] text-black md:text-xl text-md text-center self-center">
+		LSWRC-#AJ838374-09</h2>
+	<div class="w-[55%] flex justify-between mr-12">
+		<div *ngFor="let item of items;let i = index" class="flex" [className]="i%2==0?'':' self-center'">
+			<div *ngIf="i % 2 == 0;" class="text-xs font-[Quicksand] items-center flex flex-col">
+				<p
+					[className]="curStep >= steps[i/2].id ? 'w-4 h-4 rounded-full bg-[#0CB9DE] text-white mb-2 text-center':'text-black mb-2'">
+					{{steps[i/2].id}}</p>
+				<p [className]="curStep >= steps[i/2].id ? 'text-[#0CB9DE] font-bold text-center':'text-black text-center'">
+					{{steps[i/2].name}}</p>
+			</div>
+			<div *ngIf="i % 2 !==0 && i < items.length - 1" class="webkit-center">
+				<img src="../../../assets/images/stepArr.png" alt="=>" class="lg:w-[40px] sm:w-[32px] w-[24px]">
+			</div>
+		</div>
+	</div>
+</div>

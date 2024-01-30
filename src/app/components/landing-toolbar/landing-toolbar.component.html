@@ -1,0 +1,26 @@
+<div class="pt-[17px] pb-[10px] relative">
+  <!-- <div class="absolute bottom-20">
+    <div class="home-tooltip relative px-4">
+      <img [src]="'assets/icons/lampWire.svg'" alt="wire" class="absolute bottom-[-2px] right-1">
+      <img [src]="'assets/icons/lamp.svg'" alt="lamp" class="absolute right-[16px] top-[-13px]">
+      <span class="font-black text-5xl pl-8 absolute top-4 opacity-80">DID YOU KNOW?</span>
+      <p class="px-1 py-3 rounded-md text-lg font-black bg-primary-8 w-[512px] absolute top-[74px]">LASWARCO is the
+        governing authority with full legal rights to manage and regulate drillers' and water tanker's
+        operations and its licensing in Lagos State. We enforce regulations to ensure the provision of safe and reliable
+        water supply across the state. By obtaining licenses from the commission.</p>
+      <div class="absolute bottom-[55px] pl-14">
+        <button class="rounded px-3 py-1 bg-primary-8">RENEW LICENSE</button>
+        <button class="rounded px-3 py-1 bg-primary-3 text-white ml-28">NEW LICENSE</button>
+      </div>
+    </div>
+  </div> -->
+  <ul class="flex justify-around font-semibold text-base">
+    <li *ngFor="let tool of tools">
+      <div
+        class="flex flex-col items-center cursor-pointer p-1 border rounded-md hover:shadow-lg border-white hover:border-gray-300">
+        <img [src]="'assets/images/temp/' + tool.icon" [alt]="tool.title" class="w-10 h-10" />
+        <span class="text-[#0A2540] hidden md:block">{{tool.title}}</span>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,83 @@
+<p-carousel [value]="companyList" [numVisible]="3" [circular]="true" [numScroll]="1" [showIndicators]="true"
+  [responsiveOptions]="responsiveOptions" [className]="companyList.length < 3 ? 'hide-indicators':''">
+  <ng-template let-company pTemplate="item">
+    <div>
+      <div class="rounded-2xl shadow-lg my-4 mx-2 p-4 min-h-[285px] flex flex-col justify-between">
+        <div class="flex justify-between items-center gap-3">
+          <img [src]="company.companyLogo || '../../../assets/images/dummyLogo.png' " alt="Logo"
+            class="w-[35%] rounded-2xl" />
+          <div>
+            <div>
+              <p class=" font-[MontserratAlternates] font-bold text-[#043924] my-2">
+                {{ company.drillerCompanyName || 'Company Name' }}
+              </p>
+              <p class=" font-[MontserratAlternates] font-bold text-[#39B6CC] text-xs my-1">
+                {{ company.companyAddress || 'Company Address' }}
+              </p>
+            </div>
+            <div class="grid grid-cols-2">
+              <div class="flex items-center gap-2">
+                <div class="min-w-[40px] webkit-center">
+                  <img src="../../../assets/images/otherTab4.png" alt="" />
+                </div>
+                <p class="text-[#2190A4] text-[8px] font-bold">
+                  WELL WATER ANALYSIS
+                </p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div class="absolute h-full top-0 left-0 rounded-full  w-[60%] bg-[#39B6CC]"></div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="min-w-[40px] webkit-center">
+                  <img src="../../../assets/images/otherTab2.png" alt="" />
+                </div>
+                <p class="text-[#2190A4] text-[8px] font-bold">SOIL ANALYSIS</p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div class="absolute h-full top-0 left-0 rounded-full  w-[70%] bg-[#39B6CC]"></div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="min-w-[40px] webkit-center">
+                  <img src="../../../assets/images/otherTab1.png" alt="" />
+                </div>
+                <p class="text-[#2190A4] text-[8px] font-bold">
+                  WELL WATER QUALITY
+                </p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div class="absolute h-full top-0 left-0 rounded-full  w-[40%] bg-[#39B6CC]"></div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="min-w-[40px] webkit-center">
+                  <img src="../../../assets/images/otherTab4.png" alt="" />
+                </div>
+                <p class="text-[#2190A4] text-[8px] font-bold">
+                  WELL WATER RATING
+                </p>
+                <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+                  <div class="absolute h-full top-0 left-0 rounded-full  w-[50%] bg-[#39B6CC]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-2 text-[#525967] text-[13px]">
+          <div class="mb-2">
+            <p class="h-24 overflow-auto scrollable" [innerHTML]="company?.hydronetDrillerBusiness[0]?.companyBusinessBrief || 'No Description' "></p>
+          </div>
+          <div class="flex gap-4 text-sm font-[MontserratAlternates]">
+            <button class=" rounded-full bg-[#0CB9DE] text-white px-4 py-1 w-[50%]" [routerLink]="['../service', company.id, 'contact']">
+              Contact Driller
+            </button>
+            <button class="border border-[#0CB9DE] text-[#0CB9DE] rounded-full px-4 py-1 w-[50%]" (click)="toBrief(company)">
+              View Profile
+            </button>
+            <button>
+              <img src="../../assets/images/shareIcon.svg" alt="" class="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

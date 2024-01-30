@@ -1,0 +1,8 @@
+<div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+  <div *ngFor="let record of records; let i = index">
+    <app-dashboard-record></app-dashboard-record>
+  </div>
+  <div class="my-2 w-full flex justify-center">
+    <button class="rounded-xl bg-[#0CB9DE] text-white w-3/4 font-bold py-2" [routerLink]="['order']">Next</button>
+  </div>
+</div>

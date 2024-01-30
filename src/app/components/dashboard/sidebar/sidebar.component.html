@@ -1,0 +1,27 @@
+<div class="flex flex-col gap-4 w-[18.5rem]">
+  <div>
+    <mat-accordion>
+      <button
+        class="font-[Adamina] pl-[5rem] rounded-t-[6.9px] text-start bg-[#63CCD3] text-white py-5 w-full"
+      >
+        Control
+      </button>
+      <div>
+        <mat-expansion-panel *ngFor="let control of controls">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="text-[#425466] font-[Acme] text-[13px]">
+              {{ control.title }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="flex flex-col">
+            <mat-checkbox *ngFor="let check of control.checks">
+              <span class="text-[#425466] font-[Acme] text-[13px]">
+                {{ check }}
+              </span>
+            </mat-checkbox>
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </mat-accordion>
+  </div>
+</div>

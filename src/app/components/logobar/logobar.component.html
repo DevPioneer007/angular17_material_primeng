@@ -1,0 +1,14 @@
+<div class="flex justify-between bg-[#3A777B] px-8 py-2">
+	<div [routerLink]="['/']" class="hover:cursor-pointer">
+		<img src="../../../assets/images/logo.png" alt="Logo" class=" w-10 h-10" />
+	</div>
+	<div class="flex items-enter py-3 gap-4 xl:gap-6">
+		<a *ngFor="let link of navLinks" [href]="link.title.toLowerCase()" routerLinkActive="active"
+			class="text-sm hidden lg:flex items-center gap-2 hover:font-semibold">
+			<img [src]="'assets/icons/' + link.icon" [alt]="link.title" />
+			<span class="text-[14px] text-white font-[MontserratAlternates]">{{
+				link.title
+				}}</span>
+		</a>
+	</div>
+</div>

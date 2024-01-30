@@ -1,0 +1,77 @@
+<div class="bg-white p-4 shadow-md rounded-xl text-black flex-grow">
+  <div class="flex justify-between items-center gap-3 p-4">
+    <img [src]="oneChoice.companyLogo || '../../../assets/images/dummyLogo.png'" alt="Logo" class="w-[50%] lg:mr-8 mr-4 rounded-3xl hover:cursor-pointer"/>
+    <div class="w-full">
+      <p class="font-[MontserratAlternates] font-bold text-[#043924] my-2">
+        {{ oneChoice.drillerCompanyName || 'Company Name' }}
+      </p>
+      <p class="font-[MontserratAlternates] font-bold text-[#39B6CC] text-xs my-1">
+        {{ oneChoice.companyAddress || 'Company Address' }}
+      </p>
+      <div class="flex items-center gap-2">
+        <div class="min-w-[12%]">
+          <img src="../../../assets/images/otherTab4.png" alt="" />
+        </div>
+        <p class="text-[#2190A4] text-[8px] font-bold min-w-[25%]">
+          WELL WATER ANALYSIS
+        </p>
+        <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+          <div class="absolute h-full top-0 left-0 rounded-full  w-[60%] bg-[#39B6CC]"></div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="min-w-[12%]">
+          <img src="../../../assets/images/otherTab2.png" alt="" />
+        </div>
+        <p class="text-[#2190A4] text-[8px] font-bold min-w-[25%]">SOIL ANALYSIS</p>
+        <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+          <div class="absolute h-full top-0 left-0 rounded-full  w-[70%] bg-[#39B6CC]"></div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="min-w-[12%]">
+          <img src="../../../assets/images/otherTab1.png" alt="" />
+        </div>
+        <p class="text-[#2190A4] text-[8px] font-bold min-w-[25%]">
+          WELL WATER QUALITY
+        </p>
+        <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+          <div class="absolute h-full top-0 left-0 rounded-full  w-[40%] bg-[#39B6CC]"></div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="min-w-[12%]">
+          <img src="../../../assets/images/otherTab4.png" alt="" />
+        </div>
+        <p class="text-[#2190A4] text-[8px] font-bold min-w-[25%]">WELL WATER RATING</p>
+        <div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+          <div class="absolute h-full top-0 left-0 rounded-full  w-[50%] bg-[#39B6CC]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="my-2 p-4 text-[#525967] text-[13px]">
+    <div class="py-2">
+      <div *ngIf="oneChoice.hydronetDrillerBusiness.length != 0; else noBrief">
+        <p class="h-24 overflow-auto scrollable" [innerHTML]="oneChoice.hydronetDrillerBusiness[0].companyBusinessBrief || 'No Description'"></p>
+      </div>
+      <ng-template #noBrief>
+        <div>
+          <p class="h-24 overflow-auto">No Description</p>
+        </div>
+      </ng-template>
+    </div>
+    <div class="flex gap-4 text-sm mt-2">
+      <button class=" rounded-full bg-[#0CB9DE] text-white px-4 py-1 w-[50%]" [routerLink]="['../service', oneChoice.id, 'contact']">
+        Contact Driller
+      </button>
+      <button class="border border-[#0CB9DE] text-[#0CB9DE] rounded-full px-4 py-1 w-[50%]"
+        [routerLink]="['../service', oneChoice.id]">
+        View Profile
+      </button>
+      <button>
+        <img src="../../../assets/icons/shareIcon.svg" alt="" class="w-5 h-5" />
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Moul";
+  src: url("./assets/fonts/Moul-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Moulpali";
+  src: url("./assets/fonts/Moulpali-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+  font-family: "AbrilFatface";
+  src: url("./assets/fonts/AbrilFatface-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Adamina";
+  src: url("./assets/fonts/Adamina-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Acme";
+  src: url("./assets/fonts/Acme-Regular.ttf");
+}
+
+@font-face {
+  font-family: "MontserratAlternates";
+  src: url("./assets/fonts/MontserratAlternates-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand-Regular.ttf");
+}
+
+main {
+  min-height: 100vh;
+}
+
+.mat-step-icon-selected {
+  background-color: #148a92 !important;
+  color: white !important;
+}
+
+.mat-step-label-selected > .mat-step-text-label {
+  color: #148a92 !important;
+}
+
+.mat-step-icon-selected > .mat-step-icon-content {
+  color: white !important;
+}
+
+.mat-stepper-horizontal-line {
+  border-top-color: white !important;
+  border-top-width: 4px !important;
+}
+
+.mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:first-child)::before,
+[dir="rtl"]
+  .mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:last-child)::before,
+.mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:last-child)::after,
+[dir="rtl"]
+  .mat-stepper-label-position-bottom
+  .mat-horizontal-stepper-header:not(:first-child)::after {
+  border-top-color: white !important;
+  border-top-width: 4px !important;
+}
+
+.mat-step-icon:not(.mat-step-icon-selected) {
+  background-color: white !important;
+  color: rgb(51, 51, 51, 0.4) !important;
+}
+
+.mat-step-label {
+  color: rgba(251, 252, 252, 0.416) !important;
+}
+
+.mat-horizontal-content-container {
+  padding: 0 !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline
+  .mdc-notched-outline__trailing {
+  border-left-width: 0px !important;
+}
+
+.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field
+  .mdc-notched-outline__notch {
+  border-right-width: 0px !important;
+}
+
+.mdc-form-field {
+  align-items: start !important;
+  width: 100%;
+}
+
+label {
+  width: 100% !important;
+}
+
+.sidebar-shadow {
+  box-shadow: 4px 4px 2px 0px rgba(57, 182, 204, 0.75);
+  z-index: 10;
+}
+
+.mat-step-header {
+  flex: 1;
+  min-width: 220px;
+}
+
+.mat-horizontal-stepper-wrapper {
+  text-align: -webkit-center;
+}
+
+.search-location .mat-mdc-select-placeholder,
+.search-location .mat-mdc-select-arrow,
+.search-location .mat-mdc-select-value span {
+  color: #0cb9de !important;
+  font-family: "MontserratAlternates";
+}
+
+.webkit-center {
+  text-align: -webkit-center;
+}
+
+.p-carousel-indicators {
+  gap: 0.2rem;
+  height: 44px;
+}
+
+.p-carousel .p-carousel-indicators .p-link {
+  margin: 10px 0;
+  width: 16px;
+  height: 16px;
+  background-color: #0cb9de;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* .p-carousel-content {
+  position: relative;
+}
+
+.p-carousel-next, .p-carousel-prev {
+  position: absolute;
+  top: 380px;
+  font-size: 0;
+}
+
+.p-carousel-prev {
+  left: 10px;
+}
+
+.p-carousel-prev::before {
+  content: url('../src/assets/icons/leftBtn.svg');
+  display: inline-block;
+}
+
+.p-carousel-next {
+  right: 10px;
+}
+
+.p-carousel-next::before {
+  content: url('../src/assets/icons/rightBtn.svg');
+  display: inline-block;
+}
+
+chevronlefticon, chevronrighticon {
+  display: none;
+} */
+
+.p-carousel-next,
+.p-carousel-prev {
+  color: #0cb9de;
+}
+
+chevronlefticon svg,
+chevronrighticon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.p-carousel-indicator.p-highlight .p-link {
+  opacity: 1;
+}
+
+.mat-select-placeholder {
+  font-family: "MontserratAlternates";
+}
+
+.brief h2 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.brief p {
+  margin-bottom: 10px;
+}
+
+.company-info h2,
+.company-info p,
+.company-info div {
+  font-family: "Quicksand";
+}
+
+.sidebar {
+  width: 5px;
+  overflow: hidden;
+}
+
+.show-sidebar {
+  width: fit-content;
+}
+
+input:checked + label > span:nth-child(2) {
+  display: none;
+}
+
+.hide-indicators .p-carousel-indicators {
+  display: none;
+}
+
+.scrollable {
+  scrollbar-color: transparent transparent;
+}
+
+p.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+p.scrollable:hover::-webkit-scrollbar {
+  display: block;
+}
+
+p.scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+p.scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+p.scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.password-input input {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  padding: 0.5rem;
+}
+
+.password-input p-password,
+.password-input div,
+.password-input input {
+  width: 100%;
+}
+
+.d-stepper::before {
+  content: " ";
+  border-top: 4px solid #e5e7eb;
+  width: 92%;
+  top: 0;
+  left: 54%;
+  display: block;
+  position: absolute;
+  margin-top: 1rem;
+}
+
+.d-stepper-pass::before {
+  content: " ";
+  border-top: 4px solid #148a92;
+  width: 92%;
+  top: 0;
+  left: 54%;
+  display: block;
+  position: absolute;
+  margin-top: 1rem;
+}
+
+.p-dialog-content {
+  background-color: #21484f;
+  border-radius: 2rem;
+  border-color: #0cb9de;
+  border-width: 4px;
+}
+
+.banner {
+  background-image: url("./assets/images/temp/banner.png");
+}
+
+.stroke {
+  text-shadow: 0px 0.678px 1.357px #000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0cb9de;
+}
+
+.bg-selected {
+  background-color: #0094de !important;
+}
+
+.mat-mdc-tab.mdc-tab--active:hover .mdc-tab__text-label {
+  color: white !important;
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  color: white !important;
+}
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border: none;
+}

@@ -1,0 +1,85 @@
+<div>
+  <landing-sidebar></landing-sidebar>
+  <div class="">
+    <landing-navbar></landing-navbar>
+    <div class="relative background-black overflow-hidden">
+      <video autoplay muted loop id="myVideo" class="absolute min-w-full min-h-full object-cover ">
+        <source [src]="this.videoLink" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="absolute inset-0 z-1 bg-black opacity-50"></div>
+      <div
+        class="relative z-10 flex mt-5 flex-col pt-[77px] items-center pb-[5rem] px-3 min-h-[calc(100vh)] bg-no-repeat bg-cover">
+        <!-- <landing-sidebar></landing-sidebar> -->
+        <div class="text-center text-[#96E8EE] 1xl:text-[40px] text-[40px] font-[Moul] tracking-[-0.8px] mb-3">
+          Explore Licensed Borehole Expert in
+          <u class="text-[#19B6D1] font-[Moul]">Lagos State</u>
+        </div>
+        <div
+          class="max-w-[50rem] lg:max-w-[65rem] font-[Montserrat] text-center font-[1000] text-[24px] text-white mb-8">
+          Lagos State Water Regulation Commission (LSWRC) has mandated that all
+          Borehole drilling must be carried out by certified Drillers.
+        </div>
+        <div class="flex flex-col items-center gap-5 mt-1 1xl:mt-[4.5rem]">
+          <div class="text-[#CAE8EA] text-center font-[Moulpali] text-[16px]">
+            You can Search and get in touch with over 3,000 registered certified
+            borehole water Drillers with the LSWRC for your borehole water Drilling
+            needs.
+          </div>
+          <div
+            class="bg-[#D1F4F7] rounded-[14.53px] flex flex-col gap-5 pt-4 pb-3 px-6 border-[0.52px] border-black shadow-[rgba(0,0,0,0.25)]">
+            <div class="flex flex-wrap justify-between">
+              <div class="font-[Montserrat] text-[26.01px] font-bold">
+                FIND | Validate
+              </div>
+              <div class="flex items-center gap-2">
+                <div *ngFor="let drill_type of drill_types; let i = index" (click)="selectTab(i)">
+                  <button [className]="
+                  drill_type === drill_types[selectedType]
+                    ? 'text-[#082227] text-[14.53px] font-extrabold border-b-[3.63px] border-[#63CCD3]'
+                    : 'text-[#0C5256] text-[14.53px]'
+                ">
+                    {{ drill_type }}
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="border-2 pl-4 pr-2 border-[#00000037] flex items-center bg-white rounded-full">
+              <div class="flex items-center pr-7 gap-3 border-r-[0.52px] border-black">
+                <img src="/assets/icons/locFil.svg" alt="Lock Fill" class="my-2" />
+                <mat-select placeholder="Location" [(value)]="curLocation" [(ngModel)]="curLocation"
+                  (ngModelChange)="changeLocation($event)" class="border-none w-[10rem] my-2">
+                  <mat-option *ngFor="let location of locations" [value]="location.id">{{ location.lgName
+                    }}</mat-option>
+                </mat-select>
+              </div>
+              <img src="/assets/icons/locFil.svg" alt="Lock Fill" class="my-2 ml-5" />
+
+              <input type="text"
+                [placeholder]="selectedType == 1 ? 'Enter Service User Identification Number' : 'Enter Service Business Name'"
+                class="border-none w-[20rem] outline-none px-4 py-1"
+                [(ngModel)]="selectedType == 1 ? uidn : businessName" [value]="selectedType == 1 ? uidn : businessName"
+                (ngModelChange)="selectedType == 1 ? changeUIDN($event) : changeBusinessName($event) " />
+              <a (click)="toSearch()"
+                class="flex items-center gap-4 pl-4 pr-6 py-1 bg-[#63CCD3] rounded-full text-white font-bold hover:cursor-pointer">
+                <img src="/assets/icons/search.svg" alt="" class="w-5 h-5" />
+                <p class="text-[10.38px] font-bold">Search</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative z-20 bg-[#B5E0E8]">
+        <p class="font-bold text-[22px] p-2">Prefered & Sponsored Choice</p>
+        <div class="bg-white mx-1 p-2 mb-2">
+          <div *ngIf="allFeaturedCompanies; else notFeatured">
+            <app-featured-box [companyList]="allFeaturedCompanies" class="w-full" />
+          </div>
+          <ng-template #notFeatured>
+            <div class="text-2xl font-bold p-4">Not Found Any Featured Company Data</div>
+          </ng-template>
+        </div>
+      </div>
+      <app-footer />
+    </div>
+  </div>

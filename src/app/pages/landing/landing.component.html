@@ -1,0 +1,16 @@
+<div>
+  <div class="">
+    <landing-navbar></landing-navbar>
+    <div class="relative background-black overflow-hidden">
+      <video autoplay muted loop id="myVideo" class="absolute min-w-full min-h-full object-cover ">
+        <source [src]="this.videoLink" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div
+        class="relative z-10 flex mt-5 pt-0 flex-col justify-center items-center pb-[5rem] px-3 min-h-[calc(100vh-6rem)] bg-no-repeat bg-cover">
+        <landing-sidebar></landing-sidebar>
+      </div>
+    </div>
+  </div>
+</div>

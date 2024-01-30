@@ -1,0 +1,42 @@
+<div *ngIf="showSidebar$ | async" (mouseover)="isHovering = true" (mouseleave)="hide()"
+  [ngClass]="{'show-sidebar': isHovering}"
+  class="sidebar sidebar-shadow flex z-30 fixed left-0 justify-between top-1/2 transform -translate-y-1/2 bg-[#E7F4F5] rounded-tr-[17.51px] rounded-br-[17.51px] flex-col duration-200 ease-in-out transition-all">
+  <a *ngFor="let nav of sidebar;let i = index" (click)="showPopup(i)" [ngClass]="{
+      'border-b-4 border-[rgba(58,148,154,0.36)]':
+        nav.link !== sidebar[sidebar.length - 1].link,
+      'rounded-tr-[17.51px]': nav.link === sidebar[0].link,
+      'rounded-br-[17.51px]': nav.link === sidebar[sidebar.length - 1].link,
+      'bg-[#62CCD3]': href.includes(nav.link) == true
+    }" class="flex hover:bg-[#62CCD3] px-1 cursor-pointer py-2 items-center flex-col gap-3">
+    <img [src]="nav.icon" alt="Home Icon" class="w-16 h-12" />
+    <span class="text-[10px] max-w-[6rem] text-center font-[Montserrat] font-extrabold">{{ nav.title }}</span>
+  </a>
+</div>
+
+<p-dialog [(visible)]="isDisplayPopup" [showHeader]="false" [modal]="true" [dismissableMask]="true"
+  (onHide)="hideDialog()">
+  <div class="w-full max-w-[80vw]">
+    <div class="font-bold text-center font-[Moul] text-[#96E8EE] 1xl:text-[40px] text-[28px] p-2">
+      {{selectedService.title}}
+    </div>
+    <p class="max-w-[65rem] font-[Montserrat] text-center font-[1000] text-[18px] 1xl:text-[24px] text-white">
+      {{selectedService.desc}}
+    </p>
+    <div
+      class="bg-[rgba(98,204,211,0.75)] mt-4 mb-6 px-6 py-8 flex justify-between items-center flex-wrap rounded-3xl shadow-lg shadow-gray-200">
+      <div *ngFor="let item of selectedService.submenus;let i = index" class="w-[24%] ">
+        <div
+          class="flex items-center gap-2 rounded-2xl px-4 py-2 bg-[#D8F0F5E5] hover:opacity-50 duration-300 hover:cursor-pointer"
+          (click)="goTo(item.link)">
+          <div
+            class="p-2 rounded-full bg-gradient-to-r from-[#D3FFE7] to-[#EFFFF6] w-[50px] h-[50px] flex items-center justify-center">
+            <img src="/assets/icons/people.svg" alt="" class="" />
+          </div>
+          <div class="">
+            <p class="text-white text-md text-center font-bold">{{item.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</p-dialog>

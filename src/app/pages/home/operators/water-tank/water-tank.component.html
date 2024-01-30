@@ -1,0 +1,41 @@
+<!-- slider -->
+<section class="flex border banner bg-cover bg-no-repeat">
+  <div class="flex w-full">
+    <img src="../../../assets/images/temp/sidebanner.png" alt="" class="rounded-r-full max-sm:hidden" />
+    <h2 class="text-[#0F5763] text-[40px] font-bold max-sm:text-3xl stroke  mx-auto mt-10">
+      Water Tanker Dispensing Service Providers
+    </h2>
+  </div>
+</section>
+<!-- toolbar -->
+<app-landing-toolbar></app-landing-toolbar>
+<!-- water tank page body content -->
+<section class="bg-[#07912E] pb-2">
+  <div class="h-[1rem] bg-[#F7C600] w-full"></div>
+  <div class="py-5 px-3 bg-white rounded-xl m-3 flex gap-5">
+    <div class="w-1/3">
+      <mat-card *ngFor="let tanker of tankers"
+        class="example-card py-2 px-4 shadow-md border border-primary-9 rounded-xl mb-[18px]">
+        <mat-card-header class="p-0 pb-[11px]">
+          <mat-card-title class="text-xl font-bold">{{tanker.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="'assets/images/tank_carriers/' + tanker.img" alt="Photo of a Shiba Inu">
+        <mat-card-actions class="justify-center">
+          <button mat-button class="bg-primary-7 font-bold">Read More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="w-2/3">
+      <div class="shadow-xl">
+        <h3 class="text-black font-bold text-[28px] rounded-t-3xl leading-10 px-6 py-4 bg-[#F5F5F5] border border-primary-9 tracking-[-0.8px]">
+          Lagos State Water Regulatory Commission (LASWARCO)
+        </h3>
+        <div class="flex flex-col p-4 gap-5 border border-primary-9  bg-white">
+          <p class="font-normal text-[18px]" *ngFor="let content of contents">
+            {{content}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<div class="bg-white rounded-2xl shadow-xl mt-4 overflow-hidden">
+  <h2 class="bg-[#0CB9DE] font-[Quicksand] rounded-t-2xl text-white text-center py-4">Control</h2>
+  <div class="overflow-auto">
+    <!-- Parent item, collapsible menu -->
+    <div *ngFor="let item of items" class="mt-2">
+      <div
+        class="hover:bg-gray-100 px-4 py-1 cursor-pointer font-[Quicksand] font-bold flex justify-between">
+        <p class="w-full" (click)="toggleCollapse(item)">
+          {{item.label}}</p>
+        <i [className]="item.collapsed?'pi pi-angle-down text-lg':'pi pi-angle-up text-lg'"></i>
+      </div>
+      <div [className]="item.collapsed ? 'hidden':''">
+        <div class="pl-4" *ngIf="item.collapsible">
+          <div *ngFor="let child of item.items" class="my-2">
+            <input *ngIf="child.checkbox" type="checkbox" id="{{child.label}}"
+              (change)="toggleCollapse(item)" />
+            <label *ngIf="child.checkbox" for="{{child.label}}"
+              class="ml-2">{{child.label}}</label>
+            <!-- If child.checkbox is false, render label without checkbox -->
+            <p *ngIf="!child.checkbox">{{child.label}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div
+  class="flex sticky w-full top-0 z-50 items-center px-4 md:px-5 justify-between bg-[#0092E1] border-b-2 border-yellow-400">
+  <button class="lg:hidden block text-white" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" class="bg-[#0092E1]">
+    <div class="flex flex-col gap-3 px-2">
+      <a *ngFor="let link of links" [href]="'#/home/' + genLink(link.title)" routerLinkActive="active"
+        class="text-sm font-bold flex hover:text-white items-center gap-2 hover:bg-yellow-400" mat-menu-item>
+        <!-- <img [src]="'assets/icons/' + link.icon" [alt]="link.title" /> -->
+        <span class="text-white font-medium text-[16px]">{{
+          link.title
+          }}</span>
+      </a>
+      <button class="bg-[#158BA0] sm:hidden rounded-full p-2 font-semibold text-[16px] text-white">
+        Fri fragt på alle order over 1000kr
+      </button>
+    </div>
+  </mat-menu>
+
+  <div class="flex items-enter gap-2 md:gap-3 lg:gap-4 xl:gap-6 pt-1">
+    <div *ngFor="let link of links; let i = index" (click)="setSelectedPage(i)">
+      <a *ngIf="!link.items" [href]="'#/home/' + genLink(link.title)" routerLinkActive="active"
+        class="text-md font-bold hidden lg:flex items-center gap-2 py-2 2xl:px-4 px-2 hover:bg-primary-10 rounded-t-md"
+        [ngClass]="{'bg-primary-10': i === selectedPage}">
+        <span class="text-white font-medium text-center">{{
+          link.title
+          }}</span>
+      </a>
+      <div *ngIf="link.items">
+        <div
+          class="text-md font-bold hidden lg:flex items-center gap-2 py-2 2xl:px-4 px-2 hover:bg-primary-10 rounded-t-md cursor-pointer"
+          mat-button [matMenuTriggerFor]="menu" [ngClass]="{'bg-primary-10': i === selectedPage}">
+          <span class="text-white font-medium text-center">{{
+            link.title
+            }}</span>
+          <img src="/assets/images/temp/dropdown.svg" alt="">
+        </div>
+        <mat-menu #menu="matMenu" class="bg-[#0092E1]">
+          <div (click)="setSelectedPage(i)">
+            <a *ngFor="let subItem of link.items"
+              [href]="'#/home/' + genLink(link.title) + '/' + genLink(subItem.title)" routerLinkActive="active"
+              class="text-sm font-bold flex hover:text-white items-center gap-2 hover:bg-yellow-400" mat-menu-item>
+              <span class="text-white font-medium text-[16px]">{{
+                subItem.title
+                }}</span>
+            </a>
+          </div>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <button mat-button
+    class="bg-yellow-400 h-fit p-2 text-white rounded-md flex items-center gap-2 border-2 border-white">
+    <div class="flex gap-2 items-center">
+      <img src="/assets/icons/pcPlatform.svg" alt="" />
+      <div class="font-semibold text-[16px]">Login to Hydronet </div>
+    </div>
+  </button>
+</div>

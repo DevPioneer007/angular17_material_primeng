@@ -1,0 +1,147 @@
+<div class="h-screen flex flex-col">
+  <landing-sidebar></landing-sidebar>
+  <app-logobar></app-logobar>
+  <div class="bg-[#E7F4F5] p-6 flex-grow flex flex-col">
+    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between gap-5">
+      <div class="flex flex-col sm:flex-row gap-5 items-center px-4">
+        <img [src]="this.businessDetail?.companyLogo || '../../../assets/images/dummyLogo.png'" alt="" class="w-[150px] rounded-lg shadow-xl" />
+        <div class="text-[#121212] text-center">
+          <p class="text-3xl font-bold font-[MontserratAlternates]">{{this.businessDetail?.drillerCompanyName || 'Company Name'}}</p>
+          <p class="px-4 py-2 font-[MontserratAlternates]">Lorem ipsum dolor sit amet consectetur. Sed consequat.</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 text-sm text-[#121212] w-1/3">
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/locationBlue.svg" alt="" />
+          <p class="font-[MontserratAlternates]">{{this.businessDetail?.companyAddress || 'Company Address'}}</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/phoneBlue.svg" alt="" />
+          <p class="font-[MontserratAlternates]">{{this.businessDetail?.hydronetDrillerBusiness[0]?.mobileNumber || '123 456 789'}}</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/websiteBlue.svg" alt="" />
+          <p class="font-[MontserratAlternates]">{{this.businessDetail?.hydronetDrillerBusiness[0]?.zipCode || '123456'}}</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <img src="../../../assets/icons/emailBlue.svg" alt="" />
+          <p class="font-[MontserratAlternates]">{{this.businessDetail?.hydronetDrillerBusiness[0]?.email || 'exam@gmail.com'}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row py-4 gap-5">
+      <div class="w-full sm:w-[70%] lg:w-[60%] grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white rounded-2xl shadow-xl p-3 text-center">
+          <div class="flex justify-between items-center px-4">
+            <img src="../../../assets/images/otherTab3.png" alt="" class="h-full" />
+            <p class="text-[#0CB9DE] font-bold">WELL WATER ANALYSIS</p>
+          </div>
+          <div class="flex text-center items-center justify-center">
+            <p class="text-[#0CB9DE] text-3xl font-bold mt-2 px-4 py-2 rounded-full shadow-xl">4</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-3 text-center">
+          <div class="flex justify-between items-center px-4">
+            <img src="../../../assets/images/otherTab2.png" alt="" class="h-full" />
+            <p class="text-[#0CB9DE] font-bold">SOIL ANALYSIS</p>
+          </div>
+          <div class="flex text-center items-center justify-center">
+            <p class="text-[#0CB9DE] text-3xl font-bold mt-2 px-4 py-2 rounded-full shadow-xl">4</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-3 text-center">
+          <div class="flex justify-between items-center px-4">
+            <img src="../../../assets/images/otherTab1.png" alt="" class="h-full" />
+            <p class="text-[#0CB9DE] font-bold">WELL WATER ANALYSIS</p>
+          </div>
+          <div class="flex text-center items-center justify-center">
+            <p class="text-[#0CB9DE] text-3xl font-bold mt-2 px-4 py-2 rounded-full shadow-xl">4</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-3 text-center">
+          <div class="flex justify-between items-center px-4">
+            <img src="../../../assets/images/otherTab4.png" alt="" class="h-full" />
+            <p class="text-[#0CB9DE] font-bold">WELL WATER ANALYSIS</p>
+          </div>
+          <div class="flex text-center items-center justify-center">
+            <p class="text-[#0CB9DE] text-3xl font-bold mt-2 px-4 py-2 rounded-full shadow-xl">4</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full sm:w-[30%] lg:w-[40%] grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-5">
+        <div class="flex flex-col justify-between bg-white rounded-2xl shadow-xl p-3 text-center">
+          <div class="flex gap-2 justify-center items-center">
+            <img src="../../../assets/images/ratingstar.png" alt="" class="w-8 h-8" />
+            <img src="../../../assets/images/ratingstar.png" alt="" class="w-8 h-8" />
+            <img src="../../../assets/images/ratingstar.png" alt="" class="w-8 h-8" />
+            <img src="../../../assets/images/ratingstar.png" alt="" class="w-8 h-8" />
+            <img src="../../../assets/images/graystar.png" alt="" class="w-8 h-8" />
+          </div>
+          <p class="text-center text-xl text-[#121212] font-bold mt-1">Awards</p>
+          <div class="flex items-center justify-between my-2 px-2">
+            <div [className]="this.businessDetail?.drillerMarketingDetail.isPreffered ? 'bg-[#0CB9DE] text-white border border-[#0CB9DE] px-2 py-1 rounded-full flex items-center gap-1'
+            : 'text-[#121212] border border-[#0CB9DE] px-2 py-1 rounded-full flex items-center gap-1'
+        ">
+              <img
+                [src]="this.businessDetail?.drillerMarketingDetail.isPreffered ? '../../../assets/icons/cupAward1.svg' : '../../../assets/icons/cupAward.svg'"
+                alt="" class="w-4 h-4 text-red" />
+              <p [className]="this.businessDetail?.drillerMarketingDetail.isPreffered
+                ? 'bg-[#0CB9DE] text-white text-[9px] p-1'
+                : 'text-[#121212] text-[9px] p-1'
+            ">Top in drilling</p>
+            </div>
+            <div class="border border-[#0CB9DE] px-2 py-1 rounded-full flex items-center gap-1">
+              <img src="../../../assets/icons/localRanking.svg" alt="" class="w-4 h-4" />
+              <p class="text-[#121212] text-[9px] p-1">
+                #{{this.businessDetail?.drillerOperatonDetail.ranking}} Local Ranking</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-3 text-center">
+          <div class="flex gap-2  justify-center items-center">
+            <p class="text-[#0CB9DE] text-6xl font-bold">5</p>
+            <div class="text-[#121212]">
+              <p class="font-bold text-xl">Excellent</p>
+              <p class="text-sm">158 reveiws</p>
+            </div>
+          </div>
+          <div class="flex gap-2 justify-center items-center mt-2">
+            <div *ngFor="let rating of ratings; let i = index">
+              <img src="../../../assets/images/star.png" alt="" [className]="i<this.businessDetail?.drillerOperatonDetail.rating
+              ? 'bg-[#0CB9DE] w-8 h-8 p-1 rounded-full'
+              : 'bg-black w-8 h-8 p-1 rounded-full'
+            " />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-2 flex-grow flex flex-col">
+      <div class="flex w-full overflow-x-auto border-b-2 border-[#121212]">
+        <button class="bg-inherit border-b-4 px-4 font-[MontserratAlternates]"
+          [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab >= 0 }" (click)="changeActive(0)">
+          Brief
+        </button>
+        <button class="bg-inherit border-b-4 px-4 font-[MontserratAlternates]"
+          [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab >= 1 }" (click)="changeActive(1)">
+          Track Records
+        </button>
+        <button class="bg-inherit border-b-4 px-4 font-[MontserratAlternates]"
+          [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab >= 2 }" (click)="changeActive(2)">
+          Equipments
+        </button>
+        <button class="bg-inherit border-b-4 px-4 font-[MontserratAlternates]"
+          [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab >= 3 }" (click)="changeActive(3)">
+          Contact Us
+        </button>
+        <button class="bg-inherit border-b-4 px-4 font-[MontserratAlternates]"
+          [ngClass]="{ 'border-b-[#0CB9DE] ': activeTab >= 4 }" (click)="changeActive(4)">
+          About Us
+        </button>
+      </div>
+      <div class="flex-grow flex company-info mt-4">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

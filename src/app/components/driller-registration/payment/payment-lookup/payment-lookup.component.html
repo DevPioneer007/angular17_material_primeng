@@ -1,0 +1,109 @@
+<div>
+  <app-driller-stepper [curStep]="curStep" [steps]="steps" />
+  <div class="grid grid-cols-2 gap-2 p-4">
+    <div class="bg-white shadow-xl rounded-xl p-4">
+      <div class="my-2">
+        <h2 class="text-lg font-bold">Tell us more about your business Authority & Approvals </h2>
+        <p class="text-xs py-2">As a regulatory commission, we would need to verify your identification and business
+          registration Information</p>
+      </div>
+      <div class="my-2">
+        <h2 class="text-3xl font-bold text-[#043924]">Hyrdo Engineering Service Limited </h2>
+        <div class="my-2 flex">
+          <img src="../../../../../assets/images/dummyLogo.png" alt="Logo" class="rounded-md w-36 h-36">
+          <div class="flex flex-col p-2">
+            <div class="flex gap-2">
+              <span class="rounded-md px-2 text-white text-[10px] bg-[#62CCD3]">Water Analysis Complier</span>
+              <span class="rounded-md px-2 text-white text-[10px] bg-[#62CCD3]">Highly Recommended</span>
+              <span class="rounded-md px-2 text-white text-[10px] bg-[#62CCD3]">LSWRC Prefered</span>
+            </div>
+            <h3 class="text-[#043924] font-bold text-md my-2">121 BoreHole Activities</h3>
+            <div class="flex flex-col mb-4 self-center">
+              <p class="text-xs py-2 text-[#525967]">LSWRC Compilance Grading</p>
+              <p-progressBar [value]="15" [showValue]="false" [style]="{ height: '8px' }"
+                color="#0CB9DE"></p-progressBar>
+            </div>
+          </div>
+        </div>
+        <div class="my-2 flex flex-col gap-4">
+          <div class="w-full flex justify-between text-2xl">
+            <p class="text-[#333333] font-semibold">Borehole License</p>
+            <p class="text-[#FA8B02] font-semibold">N100.500.00</p>
+          </div>
+          <div class="w-full bg-gray-100 text-md text-[#333333] rounded-xl px-8 py-4">
+            <ul class="list-disc">
+              <li>Covers for Yearly Drill permit and Lagos State Operator License, families with strollers, and visitors
+                on crutches can buy priority tickets at the venue</li>
+            </ul>
+          </div>
+          <div class="w-full bg-[#C8E6FF8C] border border-gray-300 text-md text-[#333333] rounded-xl px-8 py-4">
+            <h2 class="text-lg font-bold text-[#333333]">Hydronet Driller Software Application Access </h2>
+            <ul class="list-disc my-2 pl-4">
+              <li>Yearly Subscription to the LSWRC Driller Software & Application</li>
+            </ul>
+            <p class="text-lg font-bold text-[#FA8B02]">N25,000.00 </p>
+          </div>
+          <div class="w-full bg-[#C8E6FF8C] border border-gray-300 text-md text-[#333333] rounded-xl px-8 py-4">
+            <h2 class="text-lg font-bold text-[#333333]">Featured Listing & Sponsorhip Promotions </h2>
+            <div class="flex justify-between">
+              <ul class="list-disc my-2 px-4">
+                <li>Show your Profile Above on LWSRC Driller’s Board</li>
+              </ul>
+              <div class="flex h-8 self-center">
+                <button class="text-xl rounded-md px-2 self-center">-</button>
+                <button class="bg-[#39B6CC] text-white text-lg rounded-md px-2 self-center">1</button>
+                <button class="text-xl rounded-md px-2 self-center">+</button>
+              </div>
+            </div>
+            <p class="text-lg font-bold text-[#FA8B02]">N10,000.00 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-2xl shadow-xl flex flex-col flex-grow divide-y divide-gray-200">
+      <div>
+      <h2 class="font-[OpenSans] font-bold text-2xl my-4">Your Renewal Overview</h2>
+      <div class="flex my-4">
+        <img src="../../../../assets/images/dummyLogo.png" alt="Logo" class="rounded-lg w-[25%] " />
+        <div class="px-4 flex flex-col">
+          <h2 class="font-[OpenSans] font-bold text-2xl mt-4">Wine tasting In Tuscany</h2>
+          <p class="py-1">
+            <i class="pi pi-calendar"></i>
+            23 DEC 2023 - 23 DEC 2024
+          </p>
+          <div class="w-fit text-white px-2 py-1 text-xs bg-red-500 rounded-lg text-center mt-2">Pending License</div>
+        </div>
+      </div></div>
+      <div class="my-4">
+        <div class="flex my-8 px-4 justify-between">
+          <p>
+            <span class="w-6 h-6 text-[#333333] rounded-full text-white bg-[#B0E5E9] px-2 py-1">2</span>
+            <span class="px-4 font-[OpenSans] text-sm text-[#333333]">LSWRC Borehole Driller's Permit</span>
+          </p>
+          <p class="font-[OpenSans] font-bold text-sm self-center">&euro;64.00</p>
+        </div>
+        <div class="flex my-8 px-4 justify-between">
+          <p>
+            <span class="w-6 h-6 text-[#333333] rounded-full text-white bg-[#B0E5E9] px-2 py-1">2</span>
+            <span class="px-4 font-[OpenSans] text-sm text-[#333333]">Hydronet Driller Subscription</span>
+          </p>
+          <p class="font-[OpenSans] font-bold text-sm self-center">&euro;22.00</p>
+        </div>
+        <div class="flex my-8 px-4 justify-between">
+          <p>
+            <span class="w-6 h-6 text-[#333333] rounded-full text-white bg-[#B0E5E9] px-2 py-1">2</span>
+            <span class="px-4 font-[OpenSans] text-sm text-[#333333]">Monthly Featured Listing</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="my-8 flex justify-between">
+          <p class="text-xl font-[OpenSans] font-bold text-[#333333]">Total Price</p>
+          <p class="text-xl font-[OpenSans] font-bold text-[#148A92]">&euro;86.00</p>
+        </div>
+        <button class="mt-4 w-full rounded-full bg-[#148A92] text-white py-4 font-[OpenSans] font-bold"
+          [routerLink]="['../confirm']">Go to the Next Step</button>
+      </div>
+    </div>
+  </div>
+</div>

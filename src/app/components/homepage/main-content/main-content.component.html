@@ -1,0 +1,151 @@
+<mat-tab-group color="primary">
+  <mat-tab *ngFor="let tab of tabs; let i = index" [label]="tab.tabName" [labelClass]="tab.tabClass" class="text-white rounded-t-lg">
+    <div [class]="'p-4 pb-[75px] bg-primary-' + tab.bgColor">
+      <div class="bg-white rounded-[25px] p-[22px] flex flex-col lg:flex-row" *ngIf="i == 0">
+        <div class="w-full lg:w-2/3">
+          <div class="rounded-3xl border border-[#DDD] shadow-md">
+            <p class="p-3 border-b border-b-[#DDD] bg-primary-4 rounded-t-3xl">In Focus...</p>
+            <div class="p-3">
+              <h2 class="font-bold text-3xl leading-8 font-sans tracking-[-1.1px]">Lagos State Water Regulatory
+                Commission (LASWARCO)</h2>
+              <div class="flex flex-col pt-6 leading-7 text-[17px] font-normal gap-y-5">
+                <p>Lagos State, an emerging model mega city and the smallest
+                  state in West Africa is a ‘mini Mecca’ of
+                  some sorts due to the daily influx of people into the city for both trade and investment purposes,
+                  among
+                  other reasons due to the socio-economic vibrancy of the State triggered by the rapid infrastructural
+                  development of the aquatic state.</p>
+                <p>Her population according to the Lagos State Bureau of
+                  Statistics (LBS) is put at over 22,583,305
+                  Million (Lagos State Estimate, 2014), and a population growth rate of 3.2 %. The United Nations
+                  estimates that the city population by year 2015, will have risen to about 24.5m at a growth rate of
+                  6-8%
+                  per annum making Lagos State the 3rd Largest Mega city in the world.</p>
+                <p>Due to the aforementioned reasons, there is no doubt that
+                  Lagos is the melting point of sub-Saharan
+                  Africa. This influx has exerted great pressure on the available basic institutions facilitated by the
+                  State government. From housing to transportation challenges; power supply to road infrastructure,
+                  health, education, security without exempting the environment sectors specifically the water and waste
+                  water management.
+                  Perhaps because of the magnitude of human and material lives associated and dependent on water, the
+                  State government took a bold step to address the issues relating to the provision of clean and safe
+                  drinking water for the sustenance of life by the creation of a commission whose sole responsibility is
+                  to control and regulate the activities of the state water resources and wastewater Management.</p>
+                <p>In 2004, the Lagos State Water Regulatory Commission was set up
+                  pursuant to S.48 of the Lagos Stage
+                  Water Sector Law (LSWSL) 2004 to protect the long term interests of consumers with regard to the
+                  quality, price and reliability of services received from service providers whether government owned or
+                  private and also to approve, review standards of performance of services and ensure the </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-[#DDD] shadow-md mt-8">
+            <p class="p-3 border-b border-b-[#DDD] bg-primary-4 rounded-t-3xl font-bold text-[20px]">Upcoming Events</p>
+            <div class="p-3">
+              <div class="flex">
+                <div class="w-1/3 m-3 p-1 border-b border-b-[#DDD]">
+                  <div>
+                    <p class="text-primary-1">Consideration of Adoption of the Lahontan Bacteria Basin Plan Amendment
+                      and SED</p>
+                    <p>January 17, 2024</p>
+                    <p class="text-red-500">Revised Notice</p>
+                  </div>
+                </div>
+                <div class="w-1/3 m-3 p-1 border-b border-b-[#DDD]">
+                  <div>
+                    <p class="text-primary-1">Consideration of Approval of Dominguez Channel and Greater Los Angeles and
+                      Long Beach Harbor Waters Toxic Pollutants TMDL</p>
+                    <p>January 17, 2024</p>
+                    <p class="text-red-500">Notice</p>
+                  </div>
+                </div>
+                <div class="w-1/3 m-3 p-1 border-b border-b-[#DDD]">
+                  <div>
+                    <p class="text-primary-1">Consideration of Adoption of the Lahontan Bacteria Basin Plan Amendment
+                      and
+                      SED</p>
+                    <p>January 17, 2024</p>
+                    <p class="text-red-500">Revised Notice</p>
+                  </div>
+                </div>
+              </div>
+              <div class="m-3 p-1 border-b border-b-[#DDD]">
+                <div class="w-1/3 pr-3">
+                  <div>
+                    <p class="text-primary-1">Consideration of Adoption of Santa Ynez River Basin Nitrogen Compounds
+                      TMDL
+                    </p>
+                    <p>January 17, 2024</p>
+                    <p class="text-red-500">Revised Notice | Aviso Modificado</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full">
+                <p class="text-[20px]">Exams</p>
+                <p class="text-primary-1 pl-10">Drinking Water Operator Certification Exam</p>
+                <p class="text-primary-1 pl-10">Water Operator Certification Exam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-1/3 mt-[30px] lg:mt-0 lg:ml-[30px]">
+          <div class="w-full py-2 px-[10px] bg-primary-4 rounded-[20px] shadow-md">
+            <h5 class="pb-[10px] pl-5 text-base font-bold text-primary-5">LASWARCO INTRODUCTION</h5>
+            <mat-card class="px-[7px] pt-[10px] pb-8 bg-white rounded-[20px]">
+              <mat-card-header class="bg-primary-3 font-bold rounded-l-[40px] rounded-r-[20px] p-0 mb-[6px]">
+                <div mat-card-avatar class="card-header-img m-0"></div>
+                <div class="flex flex-col justify-center">
+                  <mat-card-title class="leading-[22px] text-[15px] pl-7">Mrs Femi Funke Adepoju</mat-card-title>
+                  <mat-card-subtitle>
+                    <div class="leading-[13px]">
+                      <p class="text-[10px] text-white pl-16">Executive Secretary</p>
+                      <p class="text-[13px] text-primary-1">Lagos State Water Regulatory Commission</p>
+                    </div>
+                  </mat-card-subtitle>
+                </div>
+              </mat-card-header>
+              <div class="card-body-img flex items-center justify-center">
+                <img mat-card-image [src]="'assets/images/youtube/logo.svg'" alt="">
+              </div>
+            </mat-card>
+
+            <div class="bg-white rounded-[20px] mt-2 px-5 py-3 shadow-md">
+              <p class="pl-5 text-base font-bold text-primary-5 mb-3">Announcements</p>
+
+              <div class="flex items-center justify-center mb-3">
+                <img [src]="'assets/icons/info.svg'" alt="info" class="h-4">
+                <div class="text-sm ml-2">
+                  <span class="text-primary-1">COVID-19 - Water Boards'response to COVID-19:</span>
+                  <span>Meeting information and remote participation; Guidance for</span>
+                  <span class="text-primary-1">the public; Service of process; and more…</span>
+                </div>
+              </div>
+
+              <div *ngFor="let index of counter(5)" class="flex items-center mb-3">
+                <span class="font-black leading-5 text-xl mr-2">5</span>
+                <div class="text-sm">
+                  <span class="text-primary-1">Lorem ipsum dolor sit amet consectetur Meeting information and remote
+                    participation; Guidance for.</span>
+                  <span>(12/22/2023)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-[20px] mt-2 px-3 py-1 shadow-md">
+              <p class="text-center font-bold">Get Social with Us!</p>
+              <ul class="flex justify-around mt-7">
+                <li class="pr-[10px]"><img [src]="'assets/icons/facebookOutlet.svg'" alt="facebook"></li>
+                <li class="px-[10px]"><img [src]="'assets/icons/instagramOutlet.svg'" alt="instagram"></li>
+                <li class="px-[10px]"><img [src]="'assets/icons/linkedInOutlet.svg'" alt="linkedIn"></li>
+                <li class="px-[10px]"><img [src]="'assets/icons/twitterOutlet.svg'" alt="twitter"></li>
+                <li class="pl-[10px]"><img [src]="'assets/icons/youtubeOutlet.svg'" alt="youtube"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

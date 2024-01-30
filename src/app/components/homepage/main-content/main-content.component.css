@@ -1,0 +1,13 @@
+.card-header-img {
+  background-image: url("../../../../assets/images/avatar/woman.png");
+  height: 70px;
+  width: 70px;
+}
+
+.card-body-img {
+  background-image: url("../../../../assets/images/youtube/video_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 307px;
+}
+  

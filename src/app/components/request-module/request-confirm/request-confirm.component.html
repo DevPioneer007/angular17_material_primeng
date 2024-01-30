@@ -1,0 +1,37 @@
+<div class="my-4">
+  <app-stepper [curStep]="curStep" [steps]="steps" class="w-full"></app-stepper>
+  <div class="grid lg:grid-cols-2 gap-4">
+    <div class="bg-white p-4 rounded-2xl shadow-xl mt-4">
+      <div class="h-full flex items-center">
+        <div class="flex flex-col justify-between m-auto items-center">
+          <i class="w-16 h-16 p-4 pi pi-check bg-[#0CB9DE] text-3xl text-white rounded-full my-4 font-bold"></i>
+          <p class="font-bold font-[Quicksand] text-lg px-8 py-4 text-[#0CB9DE]">Your Licensed Payment Complete</p>
+          <p class="font-bold font-[Quicksand] text-sm px-8">You will receive an email with your licensed order details.
+          </p>
+          <button
+            class="rounded-full px-8 py-2 my-4 hover:bg-[#0CB9DE] hover:text-white duration-300 text-[#0CB9DE] font-[Quicksand] text-md bg-white border border-[#0CB9DE]"
+            [routerLink]="['/']">Go to Hydroflex Dashboard</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 rounded-2xl shadow-xl mt-4 flex flex-col justify-between">
+      <h2 class="font-[Quicksand] font-bold text-2xl my-4">Schedule Confirmed</h2>
+      <div class="flex mb-4">
+        <div class="px-4 flex flex-col">
+          <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [inline]="true" [readonlyInput]="true"
+            class="rounded-lg border-2 p-2"></p-calendar>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="my-2 flex justify-between w-[70%] items-center">
+          <p class="font-[Quicksand] font-bold">Date From</p>
+          <p class="rounded-full bg-[#0CB9DE] text-white py-2 px-8 font-[Quicksand] font-bold">2024-01-15</p>
+        </div>
+        <div class="my-2 flex justify-between w-[70%] items-center">
+          <p class="font-[Quicksand] font-bold">Date To</p>
+          <p class="rounded-full bg-[#0CB9DE] text-white py-2 px-8 font-[Quicksand] font-bold">2024-02-15</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

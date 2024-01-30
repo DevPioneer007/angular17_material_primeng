@@ -1,0 +1,102 @@
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="col-span-2 bg-white p-4 rounded-2xl shadow-xl">
+    <p class="text-center font-bold font-[Quicksand] text-[32px] text-[#0CB9DE] my-2">
+      APCOM Mouted - Truck Coring Drill Rig
+    </p>
+    <div class="grid grid-cols-4 gap-2">
+      <div class="items-center bg-white p-3 rounded-2xl">
+        <img src="../../../assets/images/equip1.png" alt="">
+      </div>
+      <div class="items-center bg-white p-3 rounded-2xl">
+        <img src="../../../assets/images/equip2.png" alt="">
+      </div>
+      <div class="items-center bg-white p-3 rounded-2xl">
+        <img src="../../../assets/images/equip3.png" alt="">
+      </div>
+      <div class="items-center bg-white p-3 rounded-2xl">
+        <img src="../../../assets/images/equip4.png" alt="">
+      </div>
+    </div>
+    <div class="font-[Quicksand] p-4">
+      <h2 class="text-2xl mb-4"><strong>Status:</strong> Functional</h2>
+      <h2 class="text-2xl"><strong>Description</strong></h2>
+      <p class="text-[#121212] mt-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+        tenetur accusantium dignissimos id eos nemo eaque praesentium
+        deserunt, nihil voluptas, laborum dolorem quo animi asperiores nobis
+        corporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur esse
+        nulla odio temporibus, adipisci consequatur ratione ducimus quisquam a
+        nostrum officiis animi, dignissimos error delectus quibusdam
+        repellendus tempore commodi aliquid porro nesciunt possimus,
+        exercitationem officia? Esse quibusdam quia distinctio, aliquid optio
+        quaerat nostrum blanditiis! Aspernatur fugiat, nemo eius repudiandae
+        dicta sit sapiente aut iure quaerat accusamus nisi voluptatem aperiam
+        doloribus esse reprehenderit! Laboriosam, placeat modi! Aspernatur,
+        perferendis? Neque nisi alias enim voluptates, temporibus minus
+        exercitationem explicabo quidem autem ex, nobis dolorum assumenda aut
+        cupiditate, accusantium nam excepturi sit nulla repudiandae. Molestias
+        sequi totam tempore voluptatem! Necessitatibus saepe exercitationem
+        commodi id obcaecati expedita facilis provident vel illo aspernatur
+        dolorum, atque iusto laboriosam a quia fugit quisquam vero corporis
+        enim nobis, temporibus sint hic! Iure, odio praesentium. Sequi
+        provident deserunt ipsum saepe optio! Tempore sed nobis, culpa
+        officiis, sint eveniet, maiores voluptatem non dolore est ex iusto
+        pariatur iure commodi recusandae sapiente totam quas explicabo cumque.
+        Quas! Dolorum minus quaerat omnis, laudantium perspiciatis, incidunt
+        praesentium eius possimus voluptatum quasi facilis voluptatem!
+        Aliquid, harum. Pariatur, doloremque. A, sit quis non cum ea quasi
+        impedit blanditiis ab similique temporibus! Quisquam, recusandae
+        delectus. Ipsa aperiam quidem culpa placeat nesciunt itaque. Similique
+        nemo libero consequuntur rerum quidem nulla quia aliquid animi eius,
+        fugiat illum praesentium ratione provident numquam dolorem nobis
+        corporis! Rem nesciunt est reiciendis unde praesentium in aperiam
+        reprehenderit quasi accusamus, odit voluptate aspernatur asperiores
+        libero labore quod? A voluptas facere accusantium totam enim nam
+        reprehenderit at consectetur, eius quaerat. Corporis, quidem
+        consequuntur unde, animi eaque similique assumenda numquam dolore
+        cupiditate expedita voluptate iure delectus quisquam id, ipsum saepe
+        eum officia? Impedit est sapiente repellendus voluptatibus vel quam,
+        praesentium aperiam.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-col h-full">
+    <div class="bg-white p-4 rounded-2xl shadow-xl sm:flex-row items-center">
+      <p class="text-xl font-bold my-4">Human Workforce</p>
+      <div class="grid grid-cols-3 gap-4 justify-center mb-4 p-2">
+        <div class="rounded-xl shadow-xl font-[Quicksand] p-2 text-center">
+          <h2 class="text-lg py-2 font-semibold">Total Workforce</h2>
+          <h1 class="text-3xl text-[#0CB9DE] py-2 font-bold">550</h1>
+        </div>
+        <div class="rounded-xl shadow-xl font-[Quicksand] p-2 text-center">
+          <h2 class="text-lg py-2 font-semibold">Workforce in Projects</h2>
+          <h1 class="text-3xl text-[#0CB9DE] py-2 font-bold">450</h1>
+        </div>
+        <div class="rounded-xl shadow-xl font-[Quicksand] p-2 text-center">
+          <h2 class="text-lg py-2 font-semibold">Workforce Available</h2>
+          <h1 class="text-3xl text-[#0CB9DE] py-2 font-bold">100</h1>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-xl my-4 flex-grow">
+      <p class="text-xl font-bold my-4">Equipments' List</p>
+      <div>
+        <div *ngFor="let checkbox of checkboxes; let i = index" class="field-checkbox">
+          <div class="relative flex w-full my-4">
+            <input type="checkbox" class="hidden" [id]="'checkbox'+ i">
+            <label [for]="'checkbox'+ i"
+              class="cursor-pointer flex items-center bg-gray-400 rounded-full leading-none w-6 h-6">
+              <span class="absolute left-0 w-6 h-6 text-center leading-6 rounded-full text-white bg-gray-400">
+                X
+              </span>
+              <span class="absolute left-0 w-6 h-6 text-center leading-6 rounded-full text-white bg-[#0CB9DE]">
+                ✔
+              </span>
+            </label>
+            <label [for]="'checkbox'+ i" class="w-fit ml-4 hover:font-semibold hover:text-[#0CB9DE] hover:cursor-pointer">APCOM Mouted-Truck Coring Drill Rig</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

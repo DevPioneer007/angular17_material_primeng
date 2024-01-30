@@ -1,0 +1,163 @@
+<div>
+	<app-logobar></app-logobar>
+	<div class="mt-2 relative justify-center py-4 px-8 mx-auto flex flex-col min-h-[calc(100vh-6rem)] max-w-[1440px]">
+		<app-stepper [curStep]="curStep" [steps]="steps" class="w-full"></app-stepper>
+		<div class="flex-grow">
+			<div class="max-h-full">
+				<app-new-sidebar></app-new-sidebar>
+			</div>
+			<div class="ml-72">
+				<div class="bg-white p-4 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between gap-5 mt-4">
+					<div class="w-[60%] flex flex-col sm:flex-row gap-5 items-center px-4">
+						<!-- <img [src]="this.businessDetail?.companyLogo || '../../../assets/images/dummyLogo.png'" alt="" class="w-[150px] rounded-lg shadow-xl" /> -->
+						<img [src]="'../../../assets/images/dummyLogo.png'" alt=""
+							class="w-[150px] rounded-2xl shadow-xl md:mx-4 mx-2" />
+						<div>
+							<div class="flex lg:gap-2 gap-1 mb-4">
+								<p class="p-1 text-white text-[8px] text-center rounded-md lg:px-1 bg-[#0CB9DE]">Water Analysis
+									Compiler</p>
+								<p class="p-1 text-white text-[8px] text-center rounded-md lg:px-1 bg-[#0CB9DE]">Highly
+									Recommended</p>
+								<p class="p-1 text-white text-[8px] text-center rounded-md lg:px-1 bg-[#0CB9DE]">LSWRC Preferred
+								</p>
+							</div>
+							<div class="text-[#121212]">
+								<!-- <p class="text-3xl font-bold font-[MontserratAlternates]">{{this.businessDetail?.drillerCompanyName || 'Company Name'}}</p> -->
+								<p class="lg:text-3xl md:text-xl text-md font-bold font-[MontserratAlternates]">Company Name</p>
+								<p class="py-2 font-[MontserratAlternates]">Lorem ipsum dolor sit amet consectetur. Sed
+									consequat.</p>
+							</div>
+							<div class="flex flex-col gap-2 text-sm text-[#121212]">
+								<div class="flex gap-2 items-center">
+									<img src="../../../assets/icons/locationBlue.svg" alt="" />
+									<!-- <p class="font-[MontserratAlternates]">{{this.businessDetail?.companyAddress || 'Company Address'}}</p> -->
+									<p class="font-[MontserratAlternates]">Company Address</p>
+								</div>
+								<div class="flex gap-2 items-center">
+									<img src="../../../assets/icons/phoneBlue.svg" alt="" />
+									<!-- <p class="font-[MontserratAlternates]">{{this.businessDetail?.hydronetDrillerBusiness[0]?.mobileNumber || '123 456 789'}}</p> -->
+									<p class="font-[MontserratAlternates]">123 456 789</p>
+								</div>
+								<div class="flex gap-4">
+									<div class="flex gap-2 items-center">
+										<img src="../../../assets/icons/websiteBlue.svg" alt="" />
+										<!-- <p class="font-[MontserratAlternates]">{{this.businessDetail?.hydronetDrillerBusiness[0]?.zipCode || '123456'}}</p> -->
+										<p class="font-[MontserratAlternates]">123456</p>
+									</div>
+									<div class="flex gap-2 items-center">
+										<img src="../../../assets/icons/emailBlue.svg" alt="" />
+										<!-- <p class="font-[MontserratAlternates]">{{this.businessDetail?.hydronetDrillerBusiness[0]?.email || 'exam@gmail.com'}}</p> -->
+										<p class="font-[MontserratAlternates]">exam&#64;gmail.com</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w-[40%] mr-8">
+						<div class="grid grid-cols-2 gap-2">
+							<div class="flex items-center gap-2">
+								<div class="min-w-[40px] webkit-center">
+									<img src="../../../assets/images/otherTab4.png" alt="" />
+								</div>
+								<p class="text-[#2190A4] text-[8px] font-bold">
+									WELL WATER ANALYSIS
+								</p>
+								<div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+									<div class="absolute h-full top-0 left-0 rounded-full  w-[60%] bg-[#39B6CC]"></div>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<div class="min-w-[40px] webkit-center">
+									<img src="../../../assets/images/otherTab2.png" alt="" />
+								</div>
+								<p class="text-[#2190A4] text-[8px] font-bold">SOIL ANALYSIS</p>
+								<div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+									<div class="absolute h-full top-0 left-0 rounded-full  w-[70%] bg-[#39B6CC]"></div>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<div class="min-w-[40px] webkit-center">
+									<img src="../../../assets/images/otherTab1.png" alt="" />
+								</div>
+								<p class="text-[#2190A4] text-[8px] font-bold">
+									WELL WATER QUALITY
+								</p>
+								<div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+									<div class="absolute h-full top-0 left-0 rounded-full  w-[40%] bg-[#39B6CC]"></div>
+								</div>
+							</div>
+							<div class="flex items-center gap-2">
+								<div class="min-w-[40px] webkit-center">
+									<img src="../../../assets/images/otherTab4.png" alt="" />
+								</div>
+								<p class="text-[#2190A4] text-[8px] font-bold">
+									WELL WATER RATING
+								</p>
+								<div class="relative h-2 rounded-full bg-[#E7F4F5] w-[200px]">
+									<div class="absolute h-full top-0 left-0 rounded-full  w-[50%] bg-[#39B6CC]"></div>
+								</div>
+							</div>
+						</div>
+						<div class="my-2 text-[#525967] text-[13px]">
+							<div class="my-4">
+								<!-- <p class="h-24 overflow-auto scrollable" [innerHTML]="company?.hydronetDrillerBusiness[0]?.companyBusinessBrief || 'No Description' "></p> -->
+								<p class="h-24 overflow-auto scrollable">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+									tenetur accusantium dignissimos id eos nemo eaque praesentium
+									deserunt, nihil voluptas, laborum dolorem quo animi asperiores nobis
+									corporis ipsam pariatur mollitia. Nihil, soluta? Ullam tenetur esse
+									nulla odio temporibus, adipisci consequatur ratione ducimus quisquam a
+									nostrum officiis animi, dignissimos error delectus quibusdam
+									repellendus tempore commodi aliquid porro nesciunt possimus,
+									exercitationem officia? Esse quibusdam quia distinctio, aliquid optio
+									quaerat nostrum blanditiis! Aspernatur fugiat, nemo eius repudiandae
+									dicta sit sapiente aut iure quaerat accusamus nisi voluptatem aperiam
+									doloribus esse reprehenderit! Laboriosam, placeat modi! Aspernatur,
+									perferendis? Neque nisi alias enim voluptates, temporibus minus
+									exercitationem explicabo quidem autem ex, nobis dolorum assumenda aut
+									cupiditate, accusantium nam excepturi sit nulla repudiandae. Molestias
+									sequi totam tempore voluptatem! Necessitatibus saepe exercitationem
+									commodi id obcaecati expedita facilis provident vel illo aspernatur
+									dolorum, atque iusto laboriosam a quia fugit quisquam vero corporis
+									enim nobis, temporibus sint hic! Iure, odio praesentium. Sequi
+									provident deserunt ipsum saepe optio! Tempore sed nobis, culpa
+									officiis, sint eveniet, maiores voluptatem non dolore est ex iusto
+									pariatur iure commodi recusandae sapiente totam quas explicabo cumque.
+									Quas! Dolorum minus quaerat omnis, laudantium perspiciatis, incidunt
+									praesentium eius possimus voluptatum quasi facilis voluptatem!
+									Aliquid, harum. Pariatur, doloremque. A, sit quis non cum ea quasi
+									impedit blanditiis ab similique temporibus! Quisquam, recusandae
+									delectus. Ipsa aperiam quidem culpa placeat nesciunt itaque. Similique
+									nemo libero consequuntur rerum quidem nulla quia aliquid animi eius,
+									fugiat illum praesentium ratione provident numquam dolorem nobis
+									corporis! Rem nesciunt est reiciendis unde praesentium in aperiam
+									reprehenderit quasi accusamus, odit voluptate aspernatur asperiores
+									libero labore quod? A voluptas facere accusantium totam enim nam
+									reprehenderit at consectetur, eius quaerat. Corporis, quidem
+									consequuntur unde, animi eaque similique assumenda numquam dolore
+									cupiditate expedita voluptate iure delectus quisquam id, ipsum saepe
+									eum officia? Impedit est sapiente repellendus voluptatibus vel quam,
+									praesentium aperiam.
+								</p>
+							</div>
+							<div class="flex gap-4 text-sm font-[MontserratAlternates]">
+								<!-- <button class=" rounded-full bg-[#0CB9DE] text-white px-4 py-1 w-[50%]" [routerLink]="['/driller', company.id, 'contact']"> -->
+								<button class=" rounded-full bg-[#0CB9DE] text-white px-4 py-1 w-[50%]">
+									Contact Driller
+								</button>
+								<!-- <button class="border border-[#0CB9DE] text-[#0CB9DE] rounded-full px-4 py-1 w-[50%]" (click)="toBrief(company)"> -->
+								<button class="border border-[#0CB9DE] text-[#0CB9DE] rounded-full px-4 py-1 w-[50%]">
+									View Profile
+								</button>
+								<button>
+									<img src="../../assets/images/shareIcon.svg" alt="" class="w-5 h-5" />
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<router-outlet></router-outlet>
+			</div>
+		</div>
+	</div>
+</div>

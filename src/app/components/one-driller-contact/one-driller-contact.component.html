@@ -1,0 +1,83 @@
+<div class="bg-white py-4 rounded-b-2xl shadow-xl px-10">
+  <div class="flex flex-col md:flex-row gap-5 rounded-3xl border p-4 shadow-md  px-6 md:px-16">
+    <div class="w-full md:w-[45%] pl-8 pr-4">
+      <p class="text-[#121212] text-[32px] font-bold">
+        Get in <span class="text-[#0CB9DE] font-[Quicksand] ">touch</span>
+      </p>
+      <p class="text-[#121212] text-[11px]">
+        Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo
+        molestie vel, ornare non id blandit netus.
+      </p>
+      <form>
+        <input type="text" class="px-4 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+          placeholder="Contact name" />
+        <input type="text" class="px-4 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+          placeholder="Street" />
+        <div class="flex gap-2 items-center">
+          <input type="text" class="px-4 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[70%] "
+            placeholder="City" />
+          <input type="text" class="px-4 py-2  bg-inherit outline-none border-b-[#121212] border-b w-[30%]"
+            placeholder="Postcode" />
+        </div>
+        <input type="text" class="px-4 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+          placeholder="Contact Phone" />
+        <input type="text" class="px-4 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+          placeholder="E-mail" />
+        <input type="text" class="px-4 py-2  bg-inherit outline-none border-b-[#121212] border-b w-full "
+          placeholder="Let's talk about your idea" />
+        <div class="flex flex-col justify-center my-4">
+          <label for="file" class="border-2 border-dotted border-gray-500 px-4 py-2 cursor-pointer">
+            <div class="flex">
+              <img src="../../../assets/images/upload.png" alt="" class="mr-4" >
+              <span class="text-gray-400">{{ file.value || "Upload Additional file" }}</span>
+            </div>
+            <input class="hidden" id="file" type="file" [formControl]="file" (change)="onFileChange($event)">
+          </label>
+          <p class="text-sm text-gray-400 mt-2">Attach file. File size of your documents should not exceed 10MB</p>
+        </div>
+        <div class="flex gap-2 items-center my-2">
+          <input type="checkbox" name="" id="" />
+          <p class="text-[11px] text-[#121212]">
+            I want to protect my data by signing an NDA
+          </p>
+        </div>
+        <input type="submit" value="Submit" class="text-white bg-[#0CB9DE] w-full py-2 rounded-full font-bold" />
+      </form>
+      <div class="grid grid-cols-3 gap-2 justify-between my-4 w-full">
+        <div class="flex">
+          <div class="self-center mr-2 min-w-[20px]">
+            <img src="../../../assets/images/phone.png" alt="Phone">
+          </div>
+          <div class="xl:text-xs text-[8px]">
+            <p class="font-bold">Phone</p>
+            <p class="text-[#0CB9DE]">123 456 789</p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="self-center mr-2 min-w-[20px]">
+            <img src="../../../assets/images/mail.png" alt="Phone">
+          </div>
+          <div class="xl:text-xs text-[8px]">
+            <p class="font-bold">E-MAIL</p>
+            <p class="text-[#0CB9DE]">info&#64;company.com</p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="self-center mr-2 min-w-[20px]">
+            <img src="../../../assets/images/mail.png" alt="Phone">
+          </div>
+          <div class="xl:text-xs text-[8px]">
+            <p class="font-bold">HELPDESK</p>
+            <p class="text-[#0CB9DE]">https://helpdesk.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-[55%] border-[30px] border-[#0CB9DE]">
+      <iframe class="w-full h-full" style="border:0" loading="lazy" allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBNe2e2H0-Fy41Ai3ZXTGl-kdLV4ZbT5dY
+    &q=Space+Needle,Seattle+WA">
+      </iframe>
+    </div>
+  </div>
+</div>

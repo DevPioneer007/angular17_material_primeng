@@ -1,0 +1,23 @@
+<div class="w-full flex justify-between flex-col">
+	<div class="flex w-full">
+		<div *ngFor="let item of steps"
+			class="relative flex items-center justify-center"
+			[ngClass]="{'d-stepper-pass': curStep > item.id, 'd-stepper': item.id !=steps.length, 'w-1/3': steps.length == 3, 'w-1/4': steps.length == 4}"
+			>
+			<div class="text-md font-[Quicksand] items-center flex flex-col">
+				<p
+					[className]="curStep >= item.id ? 'w-8 h-8 rounded-full bg-[#148A92] text-white mb-2 text-center flex items-center justify-center z-10':'w-8 h-8 rounded-full bg-gray-200 text-gray-500 mb-2 flex items-center justify-center z-10'">
+					{{item.id}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="flex">
+		<div *ngFor="let item of steps" [ngClass]="'w-1/' + steps.length + ' relative flex items-center justify-center' ">
+			<div class="text-md font-[Quicksand] items-center flex flex-col">
+				<p
+					[className]="curStep >= item.id ? 'text-[#148A92] font-bold text-center':'text-[#148A92] opacity-30 text-center'">
+					{{item.name}}</p>
+			</div>
+		</div>
+	</div>
+</div>
