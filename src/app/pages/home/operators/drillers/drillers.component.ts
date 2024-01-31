@@ -24,19 +24,31 @@ export class DrillersComponent {
       imgSel: 'technician_light.svg',
       imgUnSel: 'technician_dark.svg',
       title: 'DRILLER / TECHNICIAN',
-      contents: [],
+      contents: ['driller page tab 1'],
     },
     {
       imgSel: 'technician_light.svg',
       imgUnSel: 'technician_dark.svg',
       title: 'BOREHOLE DRILLING COMPANY',
-      contents: [],
+      contents: ['driller page tab 2'],
     },
     {
       imgSel: 'technician_light.svg',
       imgUnSel: 'technician_dark.svg',
       title: 'BOREHOLE DRILLING COMPANY',
-      contents: [],
+      contents: ['driller page tab 3'],
+    },
+    {
+      imgSel: 'technician_light.svg',
+      imgUnSel: 'technician_dark.svg',
+      title: 'BOREHOLE DRILLING COMPANY',
+      contents: ['driller page tab 4'],
+    },
+    {
+      imgSel: 'technician_light.svg',
+      imgUnSel: 'technician_dark.svg',
+      title: 'BOREHOLE DRILLING COMPANY',
+      contents: ['driller page tab 5'],
     },
   ];
 

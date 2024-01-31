@@ -2,7 +2,7 @@
 <section class="flex border banner bg-cover bg-no-repeat">
   <div class="flex w-full">
     <img src="../../../assets/images/temp/sidebanner.png" alt="" class="rounded-r-full max-sm:hidden" />
-    <h2 class="text-[#0F5763] text-[40px] font-bold max-sm:text-3xl stroke  mx-auto mt-10">
+    <h2 class="text-[#0F5763] text-[40px] font-bold max-sm:text-3xl stroke  mx-auto mt-10 text-center">
       BOREHOLE DRILLERS OPERATORS
     </h2>
   </div>
@@ -17,9 +17,9 @@
           LASWARCO Answers: Who & How for State Drillers!
         </h3>
         <div class="bg-[#D4E8EA] rounded-xl p-3 flex gap-5 flex-col">
-          <div class="flex justify-between max-lg:flex-wrap text-[11px]">
+          <div class="flex overflow-x-auto text-[11px] whitespace-nowrap gap-3">
             <div
-              class="bg-white text-[#0E839C] rounded-xl p-2 flex items-center flex-col gap-3 text-center cursor-pointer"
+              class="bg-white text-[#0E839C] rounded-xl p-2 flex items-center flex-col gap-3 text-center cursor-pointer min-w-[176px]"
               *ngFor="let item of drillerTaps; let i = index"
               [ngClass]="{'text-[#E6FBFF]': selectedTapIndex === i, 'bg-selected': selectedTapIndex === i}"
               (click)="setSelectedTapIndex(i)">
